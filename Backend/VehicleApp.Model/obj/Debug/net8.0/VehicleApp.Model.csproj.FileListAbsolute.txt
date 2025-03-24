@@ -1,0 +1,16 @@
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\bin\Debug\net8.0\VehicleApp.Model.deps.json
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\bin\Debug\net8.0\VehicleApp.Model.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\bin\Debug\net8.0\VehicleApp.Model.pdb
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\bin\Debug\net8.0\VehicleApp.Model.Common.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\bin\Debug\net8.0\VehicleApp.Model.Common.pdb
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.csproj.AssemblyReference.cache
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.AssemblyInfoInputs.cache
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.AssemblyInfo.cs
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.csproj.CoreCompileInputs.cache
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.sourcelink.json
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleA.C1811613.Up2Date
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\refint\VehicleApp.Model.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\VehicleApp.Model.pdb
+F:\Mono_vehicle_app\Backend\VehicleApp.Model\obj\Debug\net8.0\ref\VehicleApp.Model.dll

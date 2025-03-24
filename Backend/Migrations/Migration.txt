@@ -1,0 +1,4 @@
+cd F:\Mono_vehicle_app\Backend
+dotnet ef migrations add InitialCreate -p VehicleApp.DAL\VehicleApp.DAL.csproj -s VehicleApp.WebApi\VehicleApp.WebApi.csproj
+
+dotnet ef database update -p VehicleApp.DAL -s VehicleApp.WebApi

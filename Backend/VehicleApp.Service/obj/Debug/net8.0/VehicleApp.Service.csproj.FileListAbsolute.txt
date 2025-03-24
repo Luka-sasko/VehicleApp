@@ -1,0 +1,12 @@
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.deps.json
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.pdb
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.AssemblyInfoInputs.cache
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.AssemblyInfo.cs
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.csproj.CoreCompileInputs.cache
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.sourcelink.json
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\refint\VehicleApp.Service.dll
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.pdb
+F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\ref\VehicleApp.Service.dll
