@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApp.WebApi", "VehicleApp.WebApi.csproj", "{65864B90-AE6B-4A77-9F95-EBCF48462079}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -63,6 +63,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApp.DAL", "..\Vehicl
 		{B62F6AE3-D118-45C7-BE3E-B66B966198EA} = {B62F6AE3-D118-45C7-BE3E-B66B966198EA}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApp.Repository.Tests", "..\VehicleApp.Repository.Tests\VehicleApp.Repository.Tests.csproj", "{1EC5F60E-81CE-40C7-BF0C-834E78CA6C78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApp.Service.Tests", "..\VehicleApp.Service.Tests\VehicleApp.Service.Tests.csproj", "{87F52DE6-581B-4B69-BEB7-A771207235DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApp.WebApi.Tests", "..\VehicleApp.WebApi.Tests\VehicleApp.WebApi.Tests.csproj", "{F8370B77-AEEE-4459-97FE-12808B02ADA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +111,18 @@ Global
 		{98B74252-0EAF-4A2D-8AC1-EDA384507383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98B74252-0EAF-4A2D-8AC1-EDA384507383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98B74252-0EAF-4A2D-8AC1-EDA384507383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC5F60E-81CE-40C7-BF0C-834E78CA6C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC5F60E-81CE-40C7-BF0C-834E78CA6C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC5F60E-81CE-40C7-BF0C-834E78CA6C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC5F60E-81CE-40C7-BF0C-834E78CA6C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F52DE6-581B-4B69-BEB7-A771207235DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F52DE6-581B-4B69-BEB7-A771207235DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F52DE6-581B-4B69-BEB7-A771207235DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F52DE6-581B-4B69-BEB7-A771207235DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8370B77-AEEE-4459-97FE-12808B02ADA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8370B77-AEEE-4459-97FE-12808B02ADA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8370B77-AEEE-4459-97FE-12808B02ADA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8370B77-AEEE-4459-97FE-12808B02ADA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
