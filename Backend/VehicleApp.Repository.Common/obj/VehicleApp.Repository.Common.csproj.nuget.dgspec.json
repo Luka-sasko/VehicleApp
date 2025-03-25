@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {}
+    "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {}
   },
   "projects": {
-    "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {
+    "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj",
+        "projectUniqueName": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj",
         "projectName": "VehicleApp.Repository.Common",
-        "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj",
+        "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Repository.Common\\obj\\",
+        "outputPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

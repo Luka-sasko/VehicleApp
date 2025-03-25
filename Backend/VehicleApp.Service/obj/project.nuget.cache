@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "fiytzUH9GOA=",
+  "dgSpecHash": "ktBjVSeh1KE=",
   "success": true,
-  "projectFilePath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Service\\VehicleApp.Service.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleApp.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luka\\.nuget\\packages\\autofac\\8.2.0\\autofac.8.2.0.nupkg.sha512",
+    "C:\\Users\\Luka\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\Luka\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Luka\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Luka\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Luka\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.1\\system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

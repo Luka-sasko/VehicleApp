@@ -10,3 +10,15 @@ F:\Mono_vehicle_app\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common
 F:\Mono_vehicle_app\Backend\VehicleApp.Common\obj\Debug\net8.0\refint\VehicleApp.Common.dll
 F:\Mono_vehicle_app\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.pdb
 F:\Mono_vehicle_app\Backend\VehicleApp.Common\obj\Debug\net8.0\ref\VehicleApp.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\bin\Debug\net8.0\VehicleApp.Common.deps.json
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\bin\Debug\net8.0\VehicleApp.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\bin\Debug\net8.0\VehicleApp.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.AssemblyInfoInputs.cache
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.AssemblyInfo.cs
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.csproj.CoreCompileInputs.cache
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.sourcelink.json
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\refint\VehicleApp.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\VehicleApp.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Common\obj\Debug\net8.0\ref\VehicleApp.Common.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Mono_vehicle_app\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj": {}
+    "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj": {}
   },
   "projects": {
-    "F:\\Mono_vehicle_app\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj": {
+    "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj",
+        "projectUniqueName": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj",
         "projectName": "VehicleApp.DAL",
-        "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj",
+        "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.DAL\\obj\\",
+        "outputPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
-                "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
+              "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
+                "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj": {
+    "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
+        "projectUniqueName": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
         "projectName": "VehicleApp.Model.Common",
-        "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
+        "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\obj\\",
+        "outputPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -156,14 +156,14 @@
         }
       }
     },
-    "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
+    "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj",
+        "projectUniqueName": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj",
         "projectName": "VehicleApp.Model",
-        "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj",
+        "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model\\obj\\",
+        "outputPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -185,8 +185,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj": {
-                "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj"
+              "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj": {
+                "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj"
               }
             }
           }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VehicleApp.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3eff878c6f89baf5017844854c34986075372e1e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2322f3fae63b999e9eccc11d66cd2167b1463e3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("VehicleApp.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VehicleApp.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

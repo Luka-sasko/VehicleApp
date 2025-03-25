@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
+      "projectUniqueName": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
       "projectName": "VehicleApp.Model.Common",
-      "projectPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
+      "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj",
       "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-      "outputPath": "F:\\Mono_vehicle_app\\Backend\\VehicleApp.Model.Common\\obj\\",
+      "outputPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
