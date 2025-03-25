@@ -31,7 +31,6 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.Genera
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.AssemblyInfoInputs.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.AssemblyInfo.cs
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.csproj.CoreCompileInputs.cache
-F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.sourcelink.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleA.2B35BA21.Up2Date
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\refint\VehicleApp.DAL.dll

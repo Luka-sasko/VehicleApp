@@ -17,7 +17,6 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.M
 F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.Model.Common.AssemblyInfoInputs.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.Model.Common.AssemblyInfo.cs
 F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.Model.Common.csproj.CoreCompileInputs.cache
-F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.Model.Common.sourcelink.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.Model.Common.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\refint\VehicleApp.Model.Common.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Model.Common\obj\Debug\net8.0\VehicleApp.Model.Common.pdb
