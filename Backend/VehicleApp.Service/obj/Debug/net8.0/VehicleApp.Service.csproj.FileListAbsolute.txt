@@ -17,8 +17,8 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Servic
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.AssemblyInfoInputs.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.AssemblyInfo.cs
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.csproj.CoreCompileInputs.cache
-F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.sourcelink.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\refint\VehicleApp.Service.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\ref\VehicleApp.Service.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.csproj.AssemblyReference.cache

@@ -207,7 +207,6 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.MvcApplicationPartsAssemblyInfo.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.RazorAssemblyInfo.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.RazorAssemblyInfo.cs
-F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.sourcelink.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\scopedcss\bundle\VehicleApp.WebApi.styles.css
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\scopedcss\projectbundle\VehicleApp.WebApi.bundle.scp.css
@@ -227,3 +226,11 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\refint\VehicleApp.
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.genruntimeconfig.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\ref\VehicleApp.WebApi.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\Autofac.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\Autofac.Integration.WebApi.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\AutoMapper.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\System.Web.Http.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
