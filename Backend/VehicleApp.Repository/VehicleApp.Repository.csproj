@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VehicleApp.DAL\VehicleApp.DAL.csproj" />
     <ProjectReference Include="..\VehicleApp.Repository.Common\VehicleApp.Repository.Common.csproj" />
   </ItemGroup>
 

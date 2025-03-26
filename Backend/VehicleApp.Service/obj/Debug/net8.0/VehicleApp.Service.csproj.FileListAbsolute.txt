@@ -13,6 +13,7 @@ F:\Mono_vehicle_app\Backend\VehicleApp.Service\obj\Debug\net8.0\ref\VehicleApp.S
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.deps.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.csproj.AssemblyReference.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.GeneratedMSBuildEditorConfig.editorconfig
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.AssemblyInfoInputs.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.AssemblyInfo.cs
@@ -21,4 +22,18 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Servic
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\refint\VehicleApp.Service.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\ref\VehicleApp.Service.dll
-F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleApp.Service.csproj.AssemblyReference.cache
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.DAL.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Model.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Model.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Repository.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Repository.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Model.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Model.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Repository.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Repository.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.Service.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\bin\Debug\net8.0\VehicleApp.DAL.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service\obj\Debug\net8.0\VehicleA.161E0A8D.Up2Date

@@ -20,7 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VehicleApp.Common\VehicleApp.Common.csproj" />
     <ProjectReference Include="..\VehicleApp.DAL\VehicleApp.DAL.csproj" />
+    <ProjectReference Include="..\VehicleApp.Model.Common\VehicleApp.Model.Common.csproj" />
+    <ProjectReference Include="..\VehicleApp.Model\VehicleApp.Model.csproj" />
+    <ProjectReference Include="..\VehicleApp.Repository.Common\VehicleApp.Repository.Common.csproj" />
+    <ProjectReference Include="..\VehicleApp.Repository\VehicleApp.Repository.csproj" />
+    <ProjectReference Include="..\VehicleApp.Service.Common\VehicleApp.Service.Common.csproj" />
+    <ProjectReference Include="..\VehicleApp.Service\VehicleApp.Service.csproj" />
   </ItemGroup>
 
 </Project>

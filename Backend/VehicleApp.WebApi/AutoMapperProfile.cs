@@ -7,7 +7,7 @@
         {
             public AutoMapperProfile()
             {
-                //CreateMap<VehicleMake, >().ReverseMap();
+                CreateMap<VehicleMake,VehicleMakeView >().ReverseMap();
                 //CreateMap<VehicleModel, >().ReverseMap();
             }
         }

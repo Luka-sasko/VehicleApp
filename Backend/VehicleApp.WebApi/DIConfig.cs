@@ -2,17 +2,20 @@
 {
     using Autofac;
     using AutoMapper;
-
+    using VehicleApp.Repository;
+    using VehicleApp.Repository.Common;
+    using VehicleApp.Service;
+    using VehicleApp.Service.Common;
 
     public class DIConfig : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
             // Registracija repozitorija
-            //builder.RegisterType<>().As<>();
+            builder.RegisterType<VehicleMakeRepository>().As<IVehicleMakeRepository>();
 
             // Registracija servisa
-            //builder.RegisterType<>().As<>();
+            builder.RegisterType<VehicleMakeService>().As<IVehicleMakeService>();
 
             // Registracija AutoMapper-a
             builder.Register(context => new MapperConfiguration(cfg =>

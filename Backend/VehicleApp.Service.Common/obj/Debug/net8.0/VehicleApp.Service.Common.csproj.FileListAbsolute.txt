@@ -21,3 +21,9 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\obj\Debug\net8.0\VehicleApp
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\obj\Debug\net8.0\refint\VehicleApp.Service.Common.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\obj\Debug\net8.0\VehicleApp.Service.Common.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\obj\Debug\net8.0\ref\VehicleApp.Service.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\bin\Debug\net8.0\VehicleApp.Model.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\bin\Debug\net8.0\VehicleApp.Model.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\bin\Debug\net8.0\VehicleApp.Model.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\bin\Debug\net8.0\VehicleApp.Model.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\obj\Debug\net8.0\VehicleApp.Service.Common.csproj.AssemblyReference.cache
+F:\Mono_VehicleAPP\Backend\VehicleApp.Service.Common\obj\Debug\net8.0\VehicleA.4CCF3BE7.Up2Date

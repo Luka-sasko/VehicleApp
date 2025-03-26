@@ -992,6 +992,16 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "VehicleApp.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/VehicleApp.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleApp.Common.dll": {}
+        }
+      },
       "VehicleApp.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1028,6 +1038,69 @@
         },
         "runtime": {
           "bin/placeholder/VehicleApp.Model.Common.dll": {}
+        }
+      },
+      "VehicleApp.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "14.0.0",
+          "Autofac": "8.2.0",
+          "Microsoft.EntityFrameworkCore": "8.0.3",
+          "VehicleApp.DAL": "1.0.0",
+          "VehicleApp.Repository.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleApp.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleApp.Repository.dll": {}
+        }
+      },
+      "VehicleApp.Repository.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VehicleApp.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleApp.Repository.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleApp.Repository.Common.dll": {}
+        }
+      },
+      "VehicleApp.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "14.0.0",
+          "Autofac": "8.2.0",
+          "VehicleApp.Common": "1.0.0",
+          "VehicleApp.Model": "1.0.0",
+          "VehicleApp.Model.Common": "1.0.0",
+          "VehicleApp.Repository": "1.0.0",
+          "VehicleApp.Repository.Common": "1.0.0",
+          "VehicleApp.Service.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleApp.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleApp.Service.dll": {}
+        }
+      },
+      "VehicleApp.Service.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VehicleApp.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VehicleApp.Service.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VehicleApp.Service.Common.dll": {}
         }
       }
     }
@@ -2581,6 +2654,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "VehicleApp.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehicleApp.Common/VehicleApp.Common.csproj",
+      "msbuildProject": "../VehicleApp.Common/VehicleApp.Common.csproj"
+    },
     "VehicleApp.DAL/1.0.0": {
       "type": "project",
       "path": "../VehicleApp.DAL/VehicleApp.DAL.csproj",
@@ -2595,6 +2673,26 @@
       "type": "project",
       "path": "../VehicleApp.Model.Common/VehicleApp.Model.Common.csproj",
       "msbuildProject": "../VehicleApp.Model.Common/VehicleApp.Model.Common.csproj"
+    },
+    "VehicleApp.Repository/1.0.0": {
+      "type": "project",
+      "path": "../VehicleApp.Repository/VehicleApp.Repository.csproj",
+      "msbuildProject": "../VehicleApp.Repository/VehicleApp.Repository.csproj"
+    },
+    "VehicleApp.Repository.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehicleApp.Repository.Common/VehicleApp.Repository.Common.csproj",
+      "msbuildProject": "../VehicleApp.Repository.Common/VehicleApp.Repository.Common.csproj"
+    },
+    "VehicleApp.Service/1.0.0": {
+      "type": "project",
+      "path": "../VehicleApp.Service/VehicleApp.Service.csproj",
+      "msbuildProject": "../VehicleApp.Service/VehicleApp.Service.csproj"
+    },
+    "VehicleApp.Service.Common/1.0.0": {
+      "type": "project",
+      "path": "../VehicleApp.Service.Common/VehicleApp.Service.Common.csproj",
+      "msbuildProject": "../VehicleApp.Service.Common/VehicleApp.Service.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2606,7 +2704,14 @@
       "Microsoft.EntityFrameworkCore >= 8.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.2",
-      "VehicleApp.DAL >= 1.0.0"
+      "VehicleApp.Common >= 1.0.0",
+      "VehicleApp.DAL >= 1.0.0",
+      "VehicleApp.Model >= 1.0.0",
+      "VehicleApp.Model.Common >= 1.0.0",
+      "VehicleApp.Repository >= 1.0.0",
+      "VehicleApp.Repository.Common >= 1.0.0",
+      "VehicleApp.Service >= 1.0.0",
+      "VehicleApp.Service.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2642,8 +2747,29 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj"
+            },
             "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj": {
               "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\VehicleApp.Repository.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\VehicleApp.Repository.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common\\VehicleApp.Service.Common.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common\\VehicleApp.Service.Common.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleApp.Service.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleApp.Service.csproj"
             }
           }
         }
