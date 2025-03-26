@@ -22,10 +22,10 @@ namespace VehicleApp.API.Controllers
 
         // GET: api/vehiclemake
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<VehicleMakeView>>> GetAllAsync()
+        public async Task<ActionResult<IEnumerable<VehicleMake>>> GetAllAsync()
         {
             var vehicleMakes = await _vehicleMakeService.GetAllAsync();
-            return Ok(_mapper.Map<IEnumerable<VehicleMakeView>>(vehicleMakes));
+            return Ok(vehicleMakes);
         }
 
         // GET: api/vehiclemake/5

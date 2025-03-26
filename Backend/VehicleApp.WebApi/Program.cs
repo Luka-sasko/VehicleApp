@@ -20,9 +20,21 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
     containerBuilder.RegisterModule(new DIConfig());
 });
 
+//ReactApp cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy => policy.WithOrigins("http://localhost:3000") 
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials());
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.UseCors("AllowReactApp");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
