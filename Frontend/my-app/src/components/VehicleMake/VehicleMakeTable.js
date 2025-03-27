@@ -20,6 +20,10 @@ const VehicleMakeTable = ({ vehicles, fetchData }) => {
     }
   }, [editingVehicle]);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [vehiclesPerPage]);
+
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this vehicle?")) {
       try {
