@@ -16,11 +16,11 @@ const put = async (url, data) => {
     return await axios.put(`${BASE_URL}${url}`, data);
 }
 
-const remove = async (url) => {
+const del = async (url) => {
     
     return await axios.delete(`${BASE_URL}${url}`);
 }
 
 
 
-export { get, post, put, remove};
+export { get, post, put, del};

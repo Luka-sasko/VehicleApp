@@ -1,0 +1,78 @@
+#body{
+    margin-left: 10%;    
+    margin-right: 10%;
+
+    margin-top: 2%;
+    width: 80%;
+}
+
+
+#vehicles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  #vehicles-table th,
+  #vehicles-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  #vehicles-table th {
+    background-color: #f4f4f4;
+  }
+  
+  #vehicles-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .edit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+
+  .pagination {
+    margin-top: 10px;
+  }
+  
+  .pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .pagination button:hover {
+    background-color: #ddd;
+  }
+  

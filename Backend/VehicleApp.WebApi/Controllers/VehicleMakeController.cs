@@ -45,7 +45,7 @@ namespace VehicleApp.API.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateAsync([FromBody] VehicleMakeView vehicleMakeView)
         {
-            if (vehicleMakeView == null)
+            if (vehicleMakeView == null || vehicleMakeView.Abrv == "" || vehicleMakeView.Name=="")
             {
                 return BadRequest("Invalid data.");
             }
@@ -65,7 +65,7 @@ namespace VehicleApp.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateAsync(Guid id, [FromBody] VehicleMakeView vehicleMakeView)
         {
-            if (vehicleMakeView == null)
+            if (vehicleMakeView == null || vehicleMakeView.Abrv == "" || vehicleMakeView.Name == "")
             {
                 return BadRequest("Invalid data.");
             }
