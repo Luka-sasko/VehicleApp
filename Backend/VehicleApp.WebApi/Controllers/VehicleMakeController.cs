@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using VehicleApp.Model;
 using VehicleApp.Service.Common;
 using AutoMapper;
+using VehicleApp.Common;
+using System.Linq.Expressions;
 
 namespace VehicleApp.API.Controllers
 {
@@ -22,23 +24,48 @@ namespace VehicleApp.API.Controllers
 
         // GET: api/vehiclemake
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<VehicleMake>>> GetAllAsync()
+        public async Task<ActionResult<PagedList<VehicleMake>>> GetAllAsync(
+            string name = null,
+            string abrv = null,
+            int pageNumber = 1,
+            int pageSize = 10)
         {
-            var vehicleMakes = await _vehicleMakeService.GetAllAsync();
-            return Ok(vehicleMakes);
+            try
+            {
+                Expression<Func<VehicleMake, bool>> predicate = x =>
+                    (string.IsNullOrEmpty(name) || x.Name.Contains(name)) &&
+                    (string.IsNullOrEmpty(abrv) || x.Abrv.Contains(abrv));
+
+                var vehicleMakes = await _vehicleMakeService.SearchAsync(predicate, pageNumber, pageSize);
+
+                if (vehicleMakes.Items == null || !vehicleMakes.Items.Any())
+                {
+                    return NotFound("No vehicle makes found.");
+                }
+
+                return Ok(vehicleMakes);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         // GET: api/vehiclemake/5
         [HttpGet("{id}")]
         public async Task<ActionResult<VehicleMakeView>> GetByIdAsync(Guid id)
         {
-            var vehicleMake = await _vehicleMakeService.GetByIdAsync(id);
-            if (vehicleMake == null)
+            try
             {
-                return NotFound();
-            }
+                var vehicleMake = await _vehicleMakeService.GetVehicleMakeByIdAsync(id);
+                if (vehicleMake == null)
+                {
+                    return NotFound();
+                }
+                return Ok(_mapper.Map<VehicleMakeView>(vehicleMake));
 
-            return Ok(_mapper.Map<VehicleMakeView>(vehicleMake));
+            }catch (Exception ex) { return BadRequest(ex.Message); }
+
         }
 
         // POST: api/vehiclemake
@@ -51,12 +78,11 @@ namespace VehicleApp.API.Controllers
             }
 
             var vehicleMake = _mapper.Map<VehicleMake>(vehicleMakeView);
-            var success = await _vehicleMakeService.PostAsync(vehicleMake);
-
-            if (!success)
+            try
             {
-                return StatusCode(500, "Error creating resource.");
+                await _vehicleMakeService.AddVehicleMakeAsync(vehicleMake);
             }
+            catch (Exception ex) {  return BadRequest(ex.Message); }
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = vehicleMake.Id }, _mapper.Map<VehicleMakeView>(vehicleMake));
         }
@@ -72,27 +98,27 @@ namespace VehicleApp.API.Controllers
 
             var vehicleMake = _mapper.Map<VehicleMake>(vehicleMakeView);
             vehicleMake.Id = id;
-            var success = await _vehicleMakeService.UpdateAsync(vehicleMake);
-
-            if (!success)
+            try
             {
-                return StatusCode(500, "Error updating resource.");
+                await _vehicleMakeService.UpdateVehicleMakeAsync(vehicleMake);
             }
-
-            return NoContent();
+            catch (Exception ex) { return BadRequest(ex.Message); }
+            return Ok("Updated");
         }
 
         // DELETE: api/vehiclemake/5
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAsync(Guid id)
         {
-            var success = await _vehicleMakeService.DeleteAsync(id);
-            if (!success)
+            try
             {
-                return NotFound();
+                await _vehicleMakeService.DeleteVehicleMakeAsync(id);
             }
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            return Ok("Deleted");
         }
     }
 }

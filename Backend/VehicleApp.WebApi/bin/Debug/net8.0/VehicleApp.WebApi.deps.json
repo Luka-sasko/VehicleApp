@@ -596,7 +596,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
-          "VehicleApp.Model": "1.0.0"
+          "VehicleApp.Model": "1.0.0",
+          "VehicleApp.Repository.Common": "1.0.0"
         },
         "runtime": {
           "VehicleApp.DAL.dll": {
@@ -641,6 +642,7 @@
       },
       "VehicleApp.Repository.Common/1.0.0": {
         "dependencies": {
+          "VehicleApp.Common": "1.0.0",
           "VehicleApp.Model": "1.0.0"
         },
         "runtime": {
@@ -670,6 +672,7 @@
       },
       "VehicleApp.Service.Common/1.0.0": {
         "dependencies": {
+          "VehicleApp.Common": "1.0.0",
           "VehicleApp.Model": "1.0.0"
         },
         "runtime": {

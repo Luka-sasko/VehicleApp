@@ -101,6 +101,9 @@
             "projectReferences": {
               "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
                 "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
+              },
+              "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {
+                "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj"
               }
             }
           }
@@ -321,6 +324,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj": {
+                "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj"
+              },
               "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
                 "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
               }
@@ -478,6 +484,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj": {
+                "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj"
+              },
               "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
                 "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
               }

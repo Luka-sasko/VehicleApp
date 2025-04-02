@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.3",
           "Microsoft.EntityFrameworkCore.Design": "8.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
-          "VehicleApp.Model": "1.0.0"
+          "VehicleApp.Model": "1.0.0",
+          "VehicleApp.Repository.Common": "1.0.0"
         },
         "runtime": {
           "VehicleApp.DAL.dll": {}
@@ -551,6 +552,14 @@
         }
       },
       "System.Threading.Channels/6.0.0": {},
+      "VehicleApp.Common/1.0.0": {
+        "runtime": {
+          "VehicleApp.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "VehicleApp.Model/1.0.0": {
         "dependencies": {
           "VehicleApp.Model.Common": "1.0.0"
@@ -565,6 +574,18 @@
       "VehicleApp.Model.Common/1.0.0": {
         "runtime": {
           "VehicleApp.Model.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "VehicleApp.Repository.Common/1.0.0": {
+        "dependencies": {
+          "VehicleApp.Common": "1.0.0",
+          "VehicleApp.Model": "1.0.0"
+        },
+        "runtime": {
+          "VehicleApp.Repository.Common.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -858,12 +879,22 @@
       "path": "system.threading.channels/6.0.0",
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
     },
+    "VehicleApp.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "VehicleApp.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "VehicleApp.Model.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VehicleApp.Repository.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

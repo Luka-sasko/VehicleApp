@@ -22,9 +22,13 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.DAL.deps.j
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.DAL.runtimeconfig.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.DAL.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.DAL.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Common.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Model.Common.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Model.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Repository.Common.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Model.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Repository.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Common.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\bin\Debug\net8.0\VehicleApp.Model.Common.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.csproj.AssemblyReference.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.DAL\obj\Debug\net8.0\VehicleApp.DAL.GeneratedMSBuildEditorConfig.editorconfig

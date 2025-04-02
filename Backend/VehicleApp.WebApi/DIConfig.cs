@@ -2,6 +2,8 @@
 {
     using Autofac;
     using AutoMapper;
+    using Microsoft.EntityFrameworkCore;
+    using VehicleApp.DAL;
     using VehicleApp.Repository;
     using VehicleApp.Repository.Common;
     using VehicleApp.Service;
@@ -9,10 +11,26 @@
 
     public class DIConfig : Module
     {
+        private readonly IConfiguration _configuration;
+
+        public DIConfig(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         protected override void Load(ContainerBuilder builder)
         {
+            // Registracija DbContaxa
+            builder.Register(context =>
+            {
+                var optionsBuilder = new DbContextOptionsBuilder<VehicleContext>();
+                optionsBuilder.UseNpgsql(_configuration.GetConnectionString("DBConnection"));
+                return new VehicleContext(optionsBuilder.Options);
+            }).As<VehicleContext>().InstancePerLifetimeScope();
+
             // Registracija repozitorija
-            builder.RegisterType<VehicleMakeRepository>().As<IVehicleMakeRepository>();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+            builder.RegisterType<VehicleMakeRepository>().As<IVehicleMakeRepository>().InstancePerLifetimeScope();
+            builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IGenericRepository<>)).InstancePerLifetimeScope();
 
             // Registracija servisa
             builder.RegisterType<VehicleMakeService>().As<IVehicleMakeService>();

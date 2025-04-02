@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VehicleApp.Model\VehicleApp.Model.csproj" />
+    <ProjectReference Include="..\VehicleApp.Repository.Common\VehicleApp.Repository.Common.csproj" />
   </ItemGroup>
   
 

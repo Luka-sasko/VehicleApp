@@ -13,8 +13,16 @@ F:\Mono_vehicle_app\Backend\VehicleApp.Repository\obj\Debug\net8.0\ref\VehicleAp
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Repository.deps.json
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Repository.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Repository.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.DAL.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Repository.Common.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.DAL.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Repository.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Common.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.pdb
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.Common.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\VehicleApp.Repository.csproj.AssemblyReference.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\VehicleApp.Repository.GeneratedMSBuildEditorConfig.editorconfig
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\VehicleApp.Repository.AssemblyInfoInputs.cache
@@ -25,9 +33,3 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\VehicleApp.Rep
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\refint\VehicleApp.Repository.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\VehicleApp.Repository.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\obj\Debug\net8.0\ref\VehicleApp.Repository.dll
-F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.DAL.dll
-F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.Common.dll
-F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.dll
-F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.DAL.pdb
-F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.pdb
-F:\Mono_VehicleAPP\Backend\VehicleApp.Repository\bin\Debug\net8.0\VehicleApp.Model.Common.pdb

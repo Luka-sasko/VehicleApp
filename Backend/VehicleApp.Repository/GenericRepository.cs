@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using VehicleApp.Common;
 using VehicleApp.Repository.Common;
 
 namespace VehicleApp.Repository
@@ -21,14 +22,30 @@ namespace VehicleApp.Repository
             await _dbSet.AddAsync(entity);
         }
 
-        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
+        public async Task<PagedList<T>> FindAsync(Expression<Func<T, bool>> predicate, int pageNumber, int pageSize)
         {
-            return await _dbSet.Where(predicate).ToListAsync();
+            var query = _dbSet.Where(predicate);
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return new PagedList<T>(items, pageNumber, pageSize, totalCount);
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<PagedList<T>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _dbSet.ToListAsync();
+            var query = _dbSet.AsQueryable();
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return new PagedList<T>(items, pageNumber, pageSize, totalCount);
         }
 
         public async Task<T> GetByIdAsync(Guid id)

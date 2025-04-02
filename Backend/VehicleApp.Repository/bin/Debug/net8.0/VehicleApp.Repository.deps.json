@@ -201,11 +201,20 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/8.0.1": {},
+      "VehicleApp.Common/1.0.0": {
+        "runtime": {
+          "VehicleApp.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "VehicleApp.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
-          "VehicleApp.Model": "1.0.0"
+          "VehicleApp.Model": "1.0.0",
+          "VehicleApp.Repository.Common": "1.0.0"
         },
         "runtime": {
           "VehicleApp.DAL.dll": {
@@ -235,6 +244,7 @@
       },
       "VehicleApp.Repository.Common/1.0.0": {
         "dependencies": {
+          "VehicleApp.Common": "1.0.0",
           "VehicleApp.Model": "1.0.0"
         },
         "runtime": {
@@ -377,6 +387,11 @@
       "sha512": "sha512-vaoWjvkG1aenR2XdjaVivlCV9fADfgyhW5bZtXT23qaEea0lWiUljdQuze4E31vKM7ZWJaSUsbYIKE3rnzfZUg==",
       "path": "system.diagnostics.diagnosticsource/8.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512"
+    },
+    "VehicleApp.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "VehicleApp.DAL/1.0.0": {
       "type": "project",
