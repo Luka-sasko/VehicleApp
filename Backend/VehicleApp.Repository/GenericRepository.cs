@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Threading.Tasks;
 using VehicleApp.Common;
 using VehicleApp.Repository.Common;
+using System.Linq.Dynamic.Core;
 
 namespace VehicleApp.Repository
 {
@@ -22,31 +24,26 @@ namespace VehicleApp.Repository
             await _dbSet.AddAsync(entity);
         }
 
-        public async Task<PagedList<T>> FindAsync(Expression<Func<T, bool>> predicate, int pageNumber, int pageSize)
+        public async Task<PagedList<T>> GetAllAsync(Expression<Func<T, bool>> predicate, Paging paging, Sorting sorting)
         {
             var query = _dbSet.Where(predicate);
-            var totalCount = await query.CountAsync();
 
+            if (!string.IsNullOrEmpty(sorting.SortBy))
+            {
+                string orderDirection = sorting.SortOrder.ToLower() == "desc" ? "descending" : "ascending";
+                query = query.OrderBy($"{sorting.SortBy} {orderDirection}");
+            }
+
+            var totalCount = await query.CountAsync();
             var items = await query
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
+                .Skip((paging.PageNumber - 1) * paging.PageSize)
+                .Take(paging.PageSize)
                 .ToListAsync();
 
-            return new PagedList<T>(items, pageNumber, pageSize, totalCount);
+            return new PagedList<T>(items, paging.PageNumber, paging.PageSize, totalCount);
         }
 
-        public async Task<PagedList<T>> GetAllAsync(int pageNumber, int pageSize)
-        {
-            var query = _dbSet.AsQueryable();
-            var totalCount = await query.CountAsync();
 
-            var items = await query
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-
-            return new PagedList<T>(items, pageNumber, pageSize, totalCount);
-        }
 
         public async Task<T> GetByIdAsync(Guid id)
         {
@@ -61,6 +58,8 @@ namespace VehicleApp.Repository
         {
             _dbSet.Remove(entity);
         }
+
+
 
     }
 }

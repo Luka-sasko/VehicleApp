@@ -13,10 +13,9 @@ namespace VehicleApp.Service.Common
 
     public interface IVehicleMakeService
     {
-        Task<PagedList<VehicleMake>> GetAllVehicleMakesAsync(int pageNumber, int pageSize);
-        Task<PagedList<VehicleMake>> SearchAsync(Expression<Func<VehicleMake, bool>> predicate, int pageNumber, int pageSize);
+        Task<PagedList<VehicleMakeView>> GetAllAsync(Expression<Func<VehicleMake, bool>> predicate, Paging paging, Sorting sorting);
 
-        Task<VehicleMake> GetVehicleMakeByIdAsync(Guid id);
+        Task<VehicleMakeView> GetVehicleMakeByIdAsync(Guid id);
         Task AddVehicleMakeAsync(VehicleMake vehicleMake);
         Task UpdateVehicleMakeAsync(VehicleMake vehicleMake);
         Task DeleteVehicleMakeAsync(Guid id);

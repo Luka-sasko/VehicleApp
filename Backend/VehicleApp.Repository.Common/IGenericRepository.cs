@@ -12,8 +12,7 @@ namespace VehicleApp.Repository.Common
     {
 
 
-        Task<PagedList<T>> GetAllAsync(int pageNumber, int pageSize);
-        Task<PagedList<T>> FindAsync(Expression<Func<T, bool>> predicate, int pageNumber, int pageSize);
+        Task<PagedList<T>> GetAllAsync(Expression<Func<T, bool>> predicate, Paging paging,Sorting sorting);
         Task<T> GetByIdAsync(Guid id);
         Task AddAsync(T entity);
         Task Update(T entity);

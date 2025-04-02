@@ -8,8 +8,8 @@ namespace VehicleApp.Model
 {
     public class VehicleMakeView
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Abrv { get; set; }
-        public virtual ICollection<VehicleModel> Models { get; set; } = new List<VehicleModel>();
     }
 }

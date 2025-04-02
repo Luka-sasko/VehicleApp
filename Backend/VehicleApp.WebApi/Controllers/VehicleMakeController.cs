@@ -24,19 +24,23 @@ namespace VehicleApp.API.Controllers
 
         // GET: api/vehiclemake
         [HttpGet]
-        public async Task<ActionResult<PagedList<VehicleMake>>> GetAllAsync(
+        public async Task<ActionResult<PagedList<VehicleMakeView>>> GetAllAsync(
             string name = null,
             string abrv = null,
+            string sortBy = "Name",
+            string sortOrder = "asc",
             int pageNumber = 1,
             int pageSize = 10)
         {
+            Paging paging = new Paging() { PageNumber = pageNumber, PageSize=pageSize};
+            Sorting sorting = new Sorting() { SortBy = sortBy, SortOrder = sortOrder };
             try
             {
                 Expression<Func<VehicleMake, bool>> predicate = x =>
                     (string.IsNullOrEmpty(name) || x.Name.Contains(name)) &&
                     (string.IsNullOrEmpty(abrv) || x.Abrv.Contains(abrv));
 
-                var vehicleMakes = await _vehicleMakeService.SearchAsync(predicate, pageNumber, pageSize);
+                var vehicleMakes = await _vehicleMakeService.GetAllAsync(predicate, paging,sorting);
 
                 if (vehicleMakes.Items == null || !vehicleMakes.Items.Any())
                 {

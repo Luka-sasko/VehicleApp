@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -16,26 +17,29 @@ namespace VehicleApp.Service
     public class VehicleMakeService : IVehicleMakeService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public VehicleMakeService(IUnitOfWork unitOfWork)
+        public VehicleMakeService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
-        public async Task<PagedList<VehicleMake>> GetAllVehicleMakesAsync(int pageNumber, int pageSize)
+        
+
+        public async Task<PagedList<VehicleMakeView>> GetAllAsync(Expression<Func<VehicleMake, bool>> predicate, Paging paging,Sorting sorting)
         {
-            return await _unitOfWork.GetRepository<VehicleMake>().GetAllAsync(pageNumber,pageSize);
+            var vehiclesMake =  await _unitOfWork.GetRepository<VehicleMake>().GetAllAsync(predicate, paging, sorting);
+            var vehicleMakeViews = _mapper.Map<PagedList<VehicleMakeView>>(vehiclesMake);
+            return vehicleMakeViews;
         }
 
-        public async Task<PagedList<VehicleMake>> SearchAsync(Expression<Func<VehicleMake, bool>> predicate, int pageNumber, int pageSize)
+        public async Task<VehicleMakeView> GetVehicleMakeByIdAsync(Guid id)
         {
-
-            return await _unitOfWork.GetRepository<VehicleMake>().FindAsync(predicate, pageNumber, pageSize);
-        }
-
-        public async Task<VehicleMake> GetVehicleMakeByIdAsync(Guid id)
-        {
-            return await _unitOfWork.GetRepository<VehicleMake>().GetByIdAsync(id);
+            var vehicleMake = await _unitOfWork.GetRepository<VehicleMake>().GetByIdAsync(id);
+            var vehicleMakeView = _mapper.Map<VehicleMakeView>(vehicleMake);
+            return vehicleMakeView;
+            
         }
 
         public async Task AddVehicleMakeAsync(VehicleMake vehicleMake)

@@ -3,34 +3,27 @@
   "WorkspaceRootPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C48F3A70-7BE0-4D77-8705-CF6F2609DA98}|..\\VehicleApp.Repository\\VehicleApp.Repository.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\diconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:diconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\controllers\\vehiclemakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:controllers\\vehiclemakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{568BA2EE-F9FE-458D-8D93-539106B1CF72}|..\\VehicleApp.Service\\VehicleApp.Service.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service\\vehiclemakeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0C9CB5C-C6E6-4477-B734-B4EBAD22EA6E}|..\\VehicleApp.Service.Common\\VehicleApp.Service.Common.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service.common\\ivehiclemakeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\controllers\\vehiclemakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:controllers\\vehiclemakecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B62F6AE3-D118-45C7-BE3E-B66B966198EA}|..\\VehicleApp.Model\\VehicleApp.Model.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.model\\vehiclemakeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C48F3A70-7BE0-4D77-8705-CF6F2609DA98}|..\\VehicleApp.Repository\\VehicleApp.Repository.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C48F3A70-7BE0-4D77-8705-CF6F2609DA98}|..\\VehicleApp.Repository\\VehicleApp.Repository.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D713DC0-3ED9-4C89-A9B0-9F6FE13B8647}|..\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository.common\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D713DC0-3ED9-4C89-A9B0-9F6FE13B8647}|..\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository.common\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -48,28 +41,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Repository.Common\\IUnitOfWork.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\VehicleApp.Repository.Common\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IVehicleMakeService.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
+              "RelativeToolTip": "..\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:12:18.582Z",
+              "WhenOpened": "2025-04-02T18:36:12.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "AutoMapperProfile.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\AutoMapperProfile.cs",
+              "RelativeToolTip": "AutoMapperProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:25:21.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VehicleMakeView.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleMakeView.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Model\\VehicleMakeView.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleMakeView.cs",
+              "RelativeToolTip": "..\\VehicleApp.Model\\VehicleMakeView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:22:52.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Repository\\UnitOfWork.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\UnitOfWork.cs",
-              "RelativeToolTip": "..\\VehicleApp.Repository\\UnitOfWork.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Title": "VehicleMakeService.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Service\\VehicleMakeService.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
+              "RelativeToolTip": "..\\VehicleApp.Service\\VehicleMakeService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAtwCgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:12:09.27Z",
+              "WhenOpened": "2025-04-02T18:21:45.878Z",
               "EditorCaption": ""
             },
             {
@@ -80,87 +99,35 @@
               "RelativeDocumentMoniker": "..\\VehicleApp.Repository\\GenericRepository.cs",
               "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\GenericRepository.cs",
               "RelativeToolTip": "..\\VehicleApp.Repository\\GenericRepository.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAowBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwCUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:08:02.559Z",
+              "WhenOpened": "2025-04-02T18:07:33.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IVehicleMakeService.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
-              "RelativeToolTip": "..\\VehicleApp.Service.Common\\IVehicleMakeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAAAxAAAAAAAAAA==",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Repository\\UnitOfWork.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\UnitOfWork.cs",
+              "RelativeToolTip": "..\\VehicleApp.Repository\\UnitOfWork.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:02:58.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VehicleMakeService.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Service\\VehicleMakeService.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
-              "RelativeToolTip": "..\\VehicleApp.Service\\VehicleMakeService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIA7wCQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:01:38.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DIConfig.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\DIConfig.cs",
-              "RelativeDocumentMoniker": "DIConfig.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\DIConfig.cs",
-              "RelativeToolTip": "DIConfig.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T10:03:59.937Z",
+              "WhenOpened": "2025-04-02T18:07:19.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwCQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T15:02:49.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "VehicleMakeController.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleMakeController.cs",
               "RelativeDocumentMoniker": "Controllers\\VehicleMakeController.cs",
               "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleMakeController.cs",
               "RelativeToolTip": "Controllers\\VehicleMakeController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAD4vzIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAtwB4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:35:05.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Repository.Common\\IGenericRepository.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\IGenericRepository.cs",
-              "RelativeToolTip": "..\\VehicleApp.Repository.Common\\IGenericRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:18:21.814Z",
+              "WhenOpened": "2025-04-02T17:59:49.247Z",
               "EditorCaption": ""
             }
           ]
