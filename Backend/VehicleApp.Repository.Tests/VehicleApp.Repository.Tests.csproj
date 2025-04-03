@@ -11,9 +11,20 @@
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="FluentAssertions" Version="8.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="Moq.EntityFrameworkCore" Version="8.0.1.1" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleApp.Common\VehicleApp.Common.csproj" />
+    <ProjectReference Include="..\VehicleApp.Model.Common\VehicleApp.Model.Common.csproj" />
+    <ProjectReference Include="..\VehicleApp.Model\VehicleApp.Model.csproj" />
+    <ProjectReference Include="..\VehicleApp.Repository.Common\VehicleApp.Repository.Common.csproj" />
+    <ProjectReference Include="..\VehicleApp.Repository\VehicleApp.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>

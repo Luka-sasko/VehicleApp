@@ -1062,7 +1062,10 @@
           "Autofac": "8.2.0",
           "Microsoft.EntityFrameworkCore": "8.0.3",
           "System.Linq.Dynamic.Core": "1.6.0.2",
+          "VehicleApp.Common": "1.0.0",
           "VehicleApp.DAL": "1.0.0",
+          "VehicleApp.Model": "1.0.0",
+          "VehicleApp.Model.Common": "1.0.0",
           "VehicleApp.Repository.Common": "1.0.0"
         },
         "compile": {

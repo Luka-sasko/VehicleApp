@@ -992,7 +992,10 @@
       "Autofac >= 8.2.0",
       "Microsoft.EntityFrameworkCore >= 8.0.3",
       "System.Linq.Dynamic.Core >= 1.6.0.2",
+      "VehicleApp.Common >= 1.0.0",
       "VehicleApp.DAL >= 1.0.0",
+      "VehicleApp.Model >= 1.0.0",
+      "VehicleApp.Model.Common >= 1.0.0",
       "VehicleApp.Repository.Common >= 1.0.0"
     ]
   },
@@ -1029,8 +1032,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common\\VehicleApp.Common.csproj"
+            },
             "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj": {
               "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleApp.DAL.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common\\VehicleApp.Model.Common.csproj"
+            },
+            "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj": {
+              "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleApp.Model.csproj"
             },
             "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj": {
               "projectPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common\\VehicleApp.Repository.Common.csproj"

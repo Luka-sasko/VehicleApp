@@ -19,6 +19,7 @@ namespace VehicleApp.Repository
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
+
         public IGenericRepository<T> GetRepository<T>() where T : class
         {
             if (!_repositories.ContainsKey(typeof(T)))

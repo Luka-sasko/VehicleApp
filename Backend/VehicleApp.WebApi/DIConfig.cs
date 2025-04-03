@@ -28,12 +28,14 @@
             }).As<VehicleContext>().InstancePerLifetimeScope();
 
             // Registracija repozitorija
+            //builder.RegisterType<VehicleMakeRepository>().As<IVehicleMakeRepository>().InstancePerLifetimeScope();
+
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
-            builder.RegisterType<VehicleMakeRepository>().As<IVehicleMakeRepository>().InstancePerLifetimeScope();
             builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IGenericRepository<>)).InstancePerLifetimeScope();
 
             // Registracija servisa
             builder.RegisterType<VehicleMakeService>().As<IVehicleMakeService>();
+            builder.RegisterType<VehicleModelService>().As<IVehicleModelService>();
 
             // Registracija AutoMapper-a
             builder.Register(context => new MapperConfiguration(cfg =>
