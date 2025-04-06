@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using VehicleApp.Common;
 using VehicleApp.DAL;
 using VehicleApp.Model;
+using VehicleApp.Model.Common;
 using VehicleApp.Repository.Common;
 using VehicleApp.Service.Common;
 
@@ -44,12 +45,21 @@ namespace VehicleApp.Service
 
         public async Task AddVehicleMakeAsync(VehicleMake vehicleMake)
         {
+            if (vehicleMake == null)
+            {
+                throw new ArgumentNullException(nameof(vehicleMake), "Vehicle model cannot be null");
+            }
             await _unitOfWork.GetRepository<VehicleMake>().AddAsync(vehicleMake);
             await _unitOfWork.CommitAsync();
         }
 
         public async Task UpdateVehicleMakeAsync(VehicleMake vehicleMake)
+
         {
+            if (vehicleMake == null)
+            {
+                throw new ArgumentNullException(nameof(vehicleMake), "Vehicle model cannot be null");
+            }
             await _unitOfWork.GetRepository<VehicleMake>().Update(vehicleMake);
             await _unitOfWork.CommitAsync();
         }

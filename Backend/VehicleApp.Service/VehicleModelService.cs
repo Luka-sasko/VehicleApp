@@ -25,6 +25,10 @@ namespace VehicleApp.Service
         }
         public async Task AddVehicleModelAsync(VehicleModel vehicleModel)
         {
+            if (vehicleModel == null)
+            {
+                throw new ArgumentNullException(nameof(vehicleModel), "Vehicle model cannot be null");
+            }
             await _unitOfWork.GetRepository<VehicleModel>().AddAsync(vehicleModel);
             await _unitOfWork.CommitAsync();
         }
@@ -56,6 +60,10 @@ namespace VehicleApp.Service
 
         public async Task UpdateVehicleModelAsync(VehicleModel vehicleModel)
         {
+            if (vehicleModel == null)
+            {
+                throw new ArgumentNullException(nameof(vehicleModel), "Vehicle model cannot be null");
+            }
             await _unitOfWork.GetRepository<VehicleModel>().Update(vehicleModel);
             await _unitOfWork.CommitAsync();
         }

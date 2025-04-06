@@ -134,3 +134,4 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.Repository.Tests\obj\Debug\net8.0\refint\V
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository.Tests\obj\Debug\net8.0\VehicleApp.Repository.Tests.pdb
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository.Tests\obj\Debug\net8.0\VehicleApp.Repository.Tests.genruntimeconfig.cache
 F:\Mono_VehicleAPP\Backend\VehicleApp.Repository.Tests\obj\Debug\net8.0\ref\VehicleApp.Repository.Tests.dll
+F:\Mono_VehicleAPP\Backend\VehicleApp.Repository.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

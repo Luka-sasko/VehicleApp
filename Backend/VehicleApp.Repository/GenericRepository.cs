@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using VehicleApp.Common;
 using VehicleApp.Repository.Common;
 using System.Linq.Dynamic.Core;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace VehicleApp.Repository
 {
@@ -26,7 +27,13 @@ namespace VehicleApp.Repository
 
         public async Task<PagedList<T>> GetAllAsync(Expression<Func<T, bool>> predicate, Paging paging, Sorting sorting)
         {
-            var query = _dbSet.Where(predicate);
+            IQueryable<T> query = _context.Set<T>();
+
+            if (predicate != null)
+            {
+                query = query.Where(predicate);
+            }
+
 
             if (!string.IsNullOrEmpty(sorting.SortBy))
             {
@@ -52,13 +59,20 @@ namespace VehicleApp.Repository
 
         public async Task Update(T entity)
         {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
+
             _dbSet.Update(entity);
         }
         public async Task Delete(T entity)
         {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity), "Entity cannot be null.");
+
+
             _dbSet.Remove(entity);
         }
 
+     
 
 
     }

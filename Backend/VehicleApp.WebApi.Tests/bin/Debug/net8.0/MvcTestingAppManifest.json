@@ -1,0 +1,11 @@
+{
+  "VehicleApp.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Common",
+  "VehicleApp.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL",
+  "VehicleApp.Model.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model.Common",
+  "VehicleApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model",
+  "VehicleApp.Repository.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository.Common",
+  "VehicleApp.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository",
+  "VehicleApp.Service.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Common",
+  "VehicleApp.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service",
+  "VehicleApp.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi"
+}

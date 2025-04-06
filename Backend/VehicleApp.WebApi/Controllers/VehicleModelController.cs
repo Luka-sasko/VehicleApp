@@ -7,6 +7,7 @@ using AutoMapper;
 using VehicleApp.Common;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
+using VehicleApp.Service;
 
 namespace VehicleApp.WebApi.Controllers
 {
@@ -14,12 +15,12 @@ namespace VehicleApp.WebApi.Controllers
     [ApiController]
     public class VehicleModelController : ControllerBase
     {
-        private readonly IVehicleModelService _VehicleModelService;
+        private readonly IVehicleModelService _vehicleModelService;
         private readonly IMapper _mapper;
 
         public VehicleModelController(IVehicleModelService VehicleModelService, IMapper mapper)
         {
-            _VehicleModelService = VehicleModelService;
+            _vehicleModelService = VehicleModelService;
             _mapper = mapper;
         }
 
@@ -43,7 +44,7 @@ namespace VehicleApp.WebApi.Controllers
                     (string.IsNullOrEmpty(abrv) || x.Abrv.Contains(abrv)) &&
                     (id == Guid.Empty || x.Id == id);
 
-                var VehicleModels = await _VehicleModelService.GetAllAsync(predicate, paging, sorting);
+                var VehicleModels = await _vehicleModelService.GetAllAsync(predicate, paging, sorting);
 
                 if (VehicleModels.Items == null || !VehicleModels.Items.Any())
                 {
@@ -64,17 +65,19 @@ namespace VehicleApp.WebApi.Controllers
         {
             try
             {
-                var vehicleModel = await _VehicleModelService.GetVehicleModelByIdAsync(id);
+                var vehicleModel = await _vehicleModelService.GetVehicleModelByIdAsync(id);
                 if (vehicleModel == null)
                 {
                     return NotFound();
                 }
                 return Ok(_mapper.Map<VehicleModelView>(vehicleModel));
-
             }
-            catch (Exception ex) { return BadRequest(ex.Message); }
-
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
+
 
         // POST: api/vehiclemodel
         [HttpPost]
@@ -88,12 +91,13 @@ namespace VehicleApp.WebApi.Controllers
             var vehicleModel = _mapper.Map<VehicleModel>(vehicleModelView);
             try
             {
-                await _VehicleModelService.AddVehicleModelAsync(vehicleModel);
+                await _vehicleModelService.AddVehicleModelAsync(vehicleModel);
             }
             catch (Exception ex) { return BadRequest(ex.Message); }
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = vehicleModel.Id }, _mapper.Map<VehicleModelView>(vehicleModel));
         }
+
 
         // PUT: api/vehiclemodel/5
         [HttpPut("{id}")]
@@ -108,7 +112,7 @@ namespace VehicleApp.WebApi.Controllers
             VehicleModel.Id = id;
             try
             {
-                await _VehicleModelService.UpdateVehicleModelAsync(VehicleModel);
+                await _vehicleModelService.UpdateVehicleModelAsync(VehicleModel);
             }
             catch (Exception ex) { return BadRequest(ex.Message); }
             return Ok("Updated");
@@ -120,7 +124,7 @@ namespace VehicleApp.WebApi.Controllers
         {
             try
             {
-                await _VehicleModelService.DeleteVehicleModelAsync(id);
+                await _vehicleModelService.DeleteVehicleModelAsync(id);
             }
             catch (Exception ex)
             {
