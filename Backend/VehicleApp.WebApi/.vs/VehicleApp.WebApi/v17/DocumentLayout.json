@@ -3,6 +3,12 @@
   "WorkspaceRootPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{568BA2EE-F9FE-458D-8D93-539106B1CF72}|..\\VehicleApp.Service\\VehicleApp.Service.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service\\vehiclemodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{568BA2EE-F9FE-458D-8D93-539106B1CF72}|..\\VehicleApp.Service\\VehicleApp.Service.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service\\vehiclemakeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F8370B77-AEEE-4459-97FE-12808B02ADA2}|..\\VehicleApp.WebApi.Tests\\VehicleApp.WebApi.Tests.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi.tests\\vehiclemodelcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -29,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VehicleModelService.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleModelService.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Service\\VehicleModelService.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleModelService.cs",
+              "RelativeToolTip": "..\\VehicleApp.Service\\VehicleModelService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T15:28:02.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleMakeService.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Service\\VehicleMakeService.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
+              "RelativeToolTip": "..\\VehicleApp.Service\\VehicleMakeService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T15:27:53.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "VehicleModelControllerTests.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi.Tests\\VehicleModelControllerTests.cs",
               "RelativeDocumentMoniker": "..\\VehicleApp.WebApi.Tests\\VehicleModelControllerTests.cs",
@@ -41,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "VehicleModelController.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleModelController.cs",
               "RelativeDocumentMoniker": "Controllers\\VehicleModelController.cs",
@@ -49,12 +81,11 @@
               "RelativeToolTip": "Controllers\\VehicleModelController.cs",
               "ViewState": "AgIAAGoAAAAAAAAAAADwv4gAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:32:02.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T17:32:02.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VehicleModelServiceTests.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
               "RelativeDocumentMoniker": "..\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
@@ -62,8 +93,7 @@
               "RelativeToolTip": "..\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:31:33.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T17:31:33.9Z"
             }
           ]
         }
