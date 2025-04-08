@@ -25,9 +25,11 @@ namespace VehicleApp.Repository
             await _dbSet.AddAsync(entity);
         }
 
+
         public async Task<PagedList<T>> GetAllAsync(Expression<Func<T, bool>> predicate, Paging paging, Sorting sorting)
         {
             IQueryable<T> query = _context.Set<T>();
+
 
             if (predicate != null)
             {
