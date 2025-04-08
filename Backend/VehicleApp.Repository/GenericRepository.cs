@@ -31,6 +31,8 @@ namespace VehicleApp.Repository
             IQueryable<T> query = _context.Set<T>();
 
 
+
+
             if (predicate != null)
             {
                 query = query.Where(predicate);

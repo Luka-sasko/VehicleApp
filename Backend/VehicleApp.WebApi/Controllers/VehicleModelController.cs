@@ -29,7 +29,7 @@ namespace VehicleApp.WebApi.Controllers
         public async Task<ActionResult<PagedList<VehicleModelView>>> GetAllAsync(
             string name = null,
             string abrv = null,
-            Guid? id = null,
+            Guid? makeId = null,
             string sortBy = "Name",
             string sortOrder = "asc",
             int pageNumber = 1,
@@ -40,9 +40,9 @@ namespace VehicleApp.WebApi.Controllers
             try
             {
                 Expression<Func<VehicleModel, bool>> predicate = x =>
-                    (string.IsNullOrEmpty(name) || x.Name.Contains(name)) &&
-                    (string.IsNullOrEmpty(abrv) || x.Abrv.Contains(abrv)) &&
-                    (id == Guid.Empty || x.Id == id);
+                (string.IsNullOrEmpty(name) || x.Name.ToLower().Contains(name.ToLower())) &&
+                (string.IsNullOrEmpty(abrv) || (x.Abrv != null && x.Abrv.ToLower().Contains(abrv.ToLower()))) &&
+                (!makeId.HasValue || x.MakeId == makeId.Value);
 
                 var VehicleModels = await _vehicleModelService.GetAllAsync(predicate, paging, sorting);
 

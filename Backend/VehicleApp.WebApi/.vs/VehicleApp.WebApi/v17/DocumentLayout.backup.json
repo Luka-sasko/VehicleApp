@@ -3,7 +3,20 @@
   "WorkspaceRootPath": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\controllers\\vehiclemodelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:controllers\\vehiclemodelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B62F6AE3-D118-45C7-BE3E-B66B966198EA}|..\\VehicleApp.Model\\VehicleApp.Model.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.model\\vehiclemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C48F3A70-7BE0-4D77-8705-CF6F2609DA98}|..\\VehicleApp.Repository\\VehicleApp.Repository.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{568BA2EE-F9FE-458D-8D93-539106B1CF72}|..\\VehicleApp.Service\\VehicleApp.Service.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service\\vehiclemodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B62F6AE3-D118-45C7-BE3E-B66B966198EA}|..\\VehicleApp.Model\\VehicleApp.Model.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.model\\vehiclemake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C48F3A70-7BE0-4D77-8705-CF6F2609DA98}|..\\VehicleApp.Repository\\VehicleApp.Repository.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -17,24 +30,11 @@
       "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8370B77-AEEE-4459-97FE-12808B02ADA2}|..\\VehicleApp.WebApi.Tests\\VehicleApp.WebApi.Tests.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi.tests\\vehiclemodelcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{568BA2EE-F9FE-458D-8D93-539106B1CF72}|..\\VehicleApp.Service\\VehicleApp.Service.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service\\vehiclemakeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{568BA2EE-F9FE-458D-8D93-539106B1CF72}|..\\VehicleApp.Service\\VehicleApp.Service.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service\\vehiclemodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.webapi\\controllers\\vehiclemodelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65864B90-AE6B-4A77-9F95-EBCF48462079}|VehicleApp.WebApi.csproj|solutionrelative:controllers\\vehiclemodelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87F52DE6-581B-4B69-BEB7-A771207235DF}|..\\VehicleApp.Service.Tests\\VehicleApp.Service.Tests.csproj|f:\\mono_vehicleapp\\backend\\vehicleapp.service.tests\\vehiclemodelservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +44,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,46 +52,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Repository\\GenericRepository.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\GenericRepository.cs",
-              "RelativeToolTip": "..\\VehicleApp.Repository\\GenericRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCkAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "VehicleMake.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleMake.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Model\\VehicleMake.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleMake.cs",
+              "RelativeToolTip": "..\\VehicleApp.Model\\VehicleMake.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:33:25.218Z",
+              "WhenOpened": "2025-04-08T20:25:38.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\VehicleApp.Repository\\UnitOfWork.cs",
               "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\UnitOfWork.cs",
               "RelativeToolTip": "..\\VehicleApp.Repository\\UnitOfWork.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T14:33:26.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VehicleMakeController.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleMakeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VehicleMakeController.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleMakeController.cs",
-              "RelativeToolTip": "Controllers\\VehicleMakeController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAswDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T09:36:07.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -99,12 +86,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAIwC8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:39:56.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T08:39:56.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "bootstrap.js",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
               "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
@@ -116,19 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "VehicleModelService.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleModelService.cs",
               "RelativeDocumentMoniker": "..\\VehicleApp.Service\\VehicleModelService.cs",
               "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleModelService.cs",
               "RelativeToolTip": "..\\VehicleApp.Service\\VehicleModelService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T15:28:02.995Z"
+              "WhenOpened": "2025-04-07T15:28:02.995Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "VehicleMakeService.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service\\VehicleMakeService.cs",
               "RelativeDocumentMoniker": "..\\VehicleApp.Service\\VehicleMakeService.cs",
@@ -140,39 +127,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VehicleModelControllerTests.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi.Tests\\VehicleModelControllerTests.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.WebApi.Tests\\VehicleModelControllerTests.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi.Tests\\VehicleModelControllerTests.cs",
-              "RelativeToolTip": "..\\VehicleApp.WebApi.Tests\\VehicleModelControllerTests.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAADwv0AAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:32:37.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "VehicleModelController.cs",
               "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleModelController.cs",
               "RelativeDocumentMoniker": "Controllers\\VehicleModelController.cs",
               "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleModelController.cs",
               "RelativeToolTip": "Controllers\\VehicleModelController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAADwv4gAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwDMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:32:02.75Z"
+              "WhenOpened": "2025-04-06T17:32:02.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "VehicleModelServiceTests.cs",
-              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
-              "RelativeDocumentMoniker": "..\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
-              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
-              "RelativeToolTip": "..\\VehicleApp.Service.Tests\\VehicleModelServiceTests.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "VehicleModel.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleModel.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Model\\VehicleModel.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Model\\VehicleModel.cs",
+              "RelativeToolTip": "..\\VehicleApp.Model\\VehicleModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:31:33.9Z"
+              "WhenOpened": "2025-04-08T20:25:40.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\VehicleApp.Repository\\GenericRepository.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.Repository\\GenericRepository.cs",
+              "RelativeToolTip": "..\\VehicleApp.Repository\\GenericRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:33:25.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VehicleMakeController.cs",
+              "DocumentMoniker": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleMakeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleMakeController.cs",
+              "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.WebApi\\Controllers\\VehicleMakeController.cs",
+              "RelativeToolTip": "Controllers\\VehicleMakeController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T09:36:07.354Z"
             }
           ]
         }

@@ -1,9 +1,10 @@
 import VehicleMakePage from "./Pages/VehicleMakePage";
+import VehicleModelPage from "./Pages/VehicleModelPage";
 
 function App() {
   return (
     <div className="App">
-        <VehicleMakePage />
+        <VehicleModelPage />
     </div>
   );
 }

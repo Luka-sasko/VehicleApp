@@ -1,7 +1,7 @@
 import { makeAutoObservable, action } from 'mobx';
 import { get, post, put, remove } from '../Api/base_api';
 
-class VehicleStore {
+class VehicleMakeStore {
   vehicles = [];
   totalCount = 0;
   currentPage = 1;
@@ -132,4 +132,4 @@ class VehicleStore {
   }
 }
 
-export const vehicleStore = new VehicleStore();
+export const vehicleMakeStore = new VehicleMakeStore();

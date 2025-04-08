@@ -1,21 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
-import VehicleMakeEdit from './VehicleMakeEdit';
+import { vehicleModelStore } from '../../Stores/VehicleModelStore';
+import VehicleModelEdit from './VehicleModelEdit';
 import '../../Styles/VehicleMakeTable.css';
 
-const VehicleMakeTable = observer(() => {
+const VehicleModelTable = observer(() => {
+
     const formRef = useRef(null);
 
     useEffect(() => {
-        if (vehicleMakeStore.editingVehicle && formRef.current) {
+        if (vehicleModelStore.editingVehicle && formRef.current) {
             formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, [vehicleMakeStore.editingVehicle]);
+    }, [vehicleModelStore.editingVehicle]);
 
     const handleDelete = (id) => {
         if (window.confirm('Are you sure you want to delete this vehicle?')) {
-            vehicleMakeStore.deleteVehicle(id);
+            vehicleModelStore.deleteVehicle(id);
         }
     };
 
@@ -24,21 +25,22 @@ const VehicleMakeTable = observer(() => {
             <div className="filters">
                 <input
                     type="text"
-                    placeholder="Filter by name"
-                    value={vehicleMakeStore.searchName}
-                    onChange={(e) => vehicleMakeStore.setSearchName(e.target.value)}
+                    placeholder='Filter by name'
+                    value={vehicleModelStore.searchName}
+                    onChange={(e) => vehicleModelStore.setSearchName(e.target.value)}
                 />
                 <input
                     type="text"
                     placeholder="Filter by abbreviation"
-                    value={vehicleMakeStore.searchAbrv}
-                    onChange={(e) => vehicleMakeStore.setSearchAbrv(e.target.value)}
+                    value={vehicleModelStore.searchAbrv}
+                    onChange={(e) => vehicleModelStore.setSearchAbrv(e.target.value)}
                 />
+
                 <label className="select_label"> Items per page
                     <select
                         className="select_label"
-                        value={vehicleMakeStore.vehiclesPerPage}
-                        onChange={(e) => vehicleMakeStore.setVehiclesPerPage(Number(e.target.value))}
+                        value={vehicleModelStore.vehiclesPerPage}
+                        onChange={(e) => vehicleModelStore.setVehiclesPerPage(Number(e.target.value))}
                     >
                         <option value="5">5</option>
                         <option value="10">10</option>
@@ -49,45 +51,47 @@ const VehicleMakeTable = observer(() => {
                 <label className="select_label"> Sorted
                     <select
                         className="select_label"
-                        value={vehicleMakeStore.sortOrder}
-                        onChange={(e) => vehicleMakeStore.setSortOrder(e.target.value)}
+                        value={vehicleModelStore.sortOrder}
+                        onChange={(e) => vehicleModelStore.setSortOrder(e.target.value)}
                     >
                         <option value="asc">ASC</option>
                         <option value="desc">DESC</option>
                     </select>
                 </label>
+
+                <label className="select_label"> Sorted
+                    <select
+                        className="select_label"
+                        value={vehicleModelStore.sortBy}
+                        onChange={(e) => vehicleModelStore.setSortBy(e.target.value)}
+                    >
+                        <option value="Name">Name</option>
+                        <option value="Abrv">Abrv</option>
+                        <option value="MakeId">Producer</option>
+                    </select>
+                </label>
+
             </div>
 
             <table id="vehicles-table" className="styled-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>
-                            Name
-                            <button onClick={() => {
-                                vehicleMakeStore.setSortBy('Name');
-                            }}>
-                            </button>
-                        </th>
-                        <th>
-                            Abbreviation
-                            <button onClick={() => {
-                                vehicleMakeStore.setSortBy('Abrv');
-                            }}>
-
-                            </button>
-                        </th>
+                        <th>Name</th>
+                        <th> Abbreviation</th>
+                        <th>Made by</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {vehicleMakeStore.vehicles.map((vehicle, index) => (
+                    {vehicleModelStore.vehicles.map((vehicle, index) => (
                         <tr key={vehicle.id}>
-                            <td>{(vehicleMakeStore.currentPage - 1) * vehicleMakeStore.vehiclesPerPage + index + 1}</td>
+                            <td>{(vehicleModelStore.currentPage - 1) * vehicleModelStore.vehiclesPerPage + index + 1}</td>
                             <td>{vehicle.name}</td>
                             <td>{vehicle.abrv}</td>
+                            <td>{vehicle.makeId}</td>
                             <td>
-                                <button className="edit-btn" onClick={() => vehicleMakeStore.setEditingVehicle(vehicle)}>
+                                <button className="edit-btn" onClick={() => vehicleModelStore.setEditingVehicle(vehicle)}>
                                     Edit
                                 </button>
                                 <button className="delete-btn" onClick={() => handleDelete(vehicle.id)}>
@@ -100,12 +104,12 @@ const VehicleMakeTable = observer(() => {
             </table>
 
             <div className="pagination">
-                {vehicleMakeStore.totalPages > 0 ? (
-                    Array.from({ length: vehicleMakeStore.totalPages }, (_, i) => (
+                {vehicleModelStore.totalPages > 0 ? (
+                    Array.from({ length: vehicleModelStore.totalPages }, (_, i) => (
                         <button
                             key={i + 1}
-                            onClick={() => vehicleMakeStore.setCurrentPage(i + 1)}
-                            className={vehicleMakeStore.currentPage === i + 1 ? 'active' : ''}
+                            onClick={() => vehicleModelStore.setCurrentPage(i + 1)}
+                            className={vehicleModelStore.currentPage === i + 1 ? 'active' : ''}
                         >
                             {i + 1}
                         </button>
@@ -116,14 +120,15 @@ const VehicleMakeTable = observer(() => {
 
             </div>
 
-            {vehicleMakeStore.editingVehicle && (
+            {vehicleModelStore.editingVehicle && (
                 <div ref={formRef}>
-                    <VehicleMakeEdit />
+                    <VehicleModelEdit />
                 </div>
             )}
 
         </div>
     );
+
 });
 
-export default VehicleMakeTable;
+export default VehicleModelTable;
