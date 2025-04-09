@@ -19,7 +19,7 @@
         }
         protected override void Load(ContainerBuilder builder)
         {
-            // Registracija DbContaxa
+            // Registracija DbContexta
             builder.Register(context =>
             {
                 var optionsBuilder = new DbContextOptionsBuilder<VehicleContext>();

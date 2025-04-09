@@ -43,7 +43,6 @@ class VehicleMakeStore {
       });
 
       const response = await get(`/vehiclemake?${params.toString()}`);
-      console.log(response.data);
       this.setVehicles(response.data.items);
       this.setTotalCount(response.data.totalCount);
     } catch (error) {

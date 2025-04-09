@@ -44,9 +44,7 @@ class VehicleModelStore {
                 pageNumber: this.currentPage,
                 pageSize: this.vehiclesPerPage
             });
-            console.log(`/vehiclemodel?${params.toString()}`);
             const response = await get(`/vehiclemodel?${params.toString()}`);
-            console.log(response.data);
             this.setVehicles(response.data.items);
             this.setTotalCount(response.data.totalCount);
         } catch (error) {
@@ -59,7 +57,7 @@ class VehicleModelStore {
     async addVehicle(vehicle) {
         try {
             await post('/vehiclemodel/', vehicle);
-            this.newVehicle = { name: '', abrv: '' }
+            this.newVehicle = { name: '', abrv: '',makeId: '' }
             await this.fetchVehicles();
         } catch (error) {
             console.error('Error adding vehicle:', error);
