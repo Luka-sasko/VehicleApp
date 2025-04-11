@@ -11,7 +11,7 @@
     display: inline-block;
     margin: 0 15px;
     padding: 12px 24px;
-    background-color: #2563eb; /* blue-600 */
+    background-color: #2563eb; 
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -20,6 +20,30 @@
   }
   
   .home-btn:hover {
-    background-color: #1e40af; /* darker blue */
+    background-color: #1e40af; 
+  }
+  
+
+  .features {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #1e3a8a;
+  }
+  
+  .features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .features li {
+    margin: 10px 0;
+    font-size: 1.1rem;
   }
   

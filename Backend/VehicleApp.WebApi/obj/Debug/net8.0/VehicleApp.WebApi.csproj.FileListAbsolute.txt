@@ -238,7 +238,6 @@ F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\staticwebassets\ms
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.VehicleApp.WebApi.props
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.VehicleApp.WebApi.props
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\staticwebassets.pack.json
-F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleA.BB0435DA.Up2Date
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\VehicleApp.WebApi.dll
 F:\Mono_VehicleAPP\Backend\VehicleApp.WebApi\obj\Debug\net8.0\refint\VehicleApp.WebApi.dll

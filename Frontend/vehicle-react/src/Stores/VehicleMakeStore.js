@@ -27,8 +27,8 @@ class VehicleMakeStore {
       setSearchName: action,
       setSearchAbrv: action,
       setVehicles: action,
-      setTotalCount: action 
-    });
+      setTotalCount: action
+        });
   }
 
   async fetchVehicles() {
@@ -125,6 +125,14 @@ class VehicleMakeStore {
   setTotalCount(total) {
     this.totalCount = total;
   }
+
+  get getNameAndId() {
+    return this.vehicles.map(v => ({
+      name: v.name,
+      id: v.id
+    }));
+  }
+  
 
   get totalPages() {
     return Math.ceil(this.totalCount / this.vehiclesPerPage) || 1;

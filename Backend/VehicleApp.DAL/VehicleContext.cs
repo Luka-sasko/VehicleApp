@@ -13,7 +13,15 @@ namespace VehicleApp.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<VehicleMake>()
+             .HasIndex(vm => vm.Name) 
+             .IsUnique();
+
+            modelBuilder.Entity<VehicleMake>()
                 .HasKey(vm => vm.Id);
+
+            modelBuilder.Entity<VehicleModel>()
+                .HasIndex(vm => vm.Name) 
+                .IsUnique();
 
             modelBuilder.Entity<VehicleModel>()
                 .HasKey(vm => vm.Id);

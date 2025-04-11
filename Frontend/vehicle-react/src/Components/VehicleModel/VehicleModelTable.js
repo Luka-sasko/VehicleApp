@@ -1,12 +1,53 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { get } from '../../Api/base_api';
 import { observer } from 'mobx-react-lite';
 import { vehicleModelStore } from '../../Stores/VehicleModelStore';
+import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
+
 import VehicleModelEdit from './VehicleModelEdit';
 import '../../Styles/VehicleMakeTable.css';
 
 const VehicleModelTable = observer(() => {
 
+    const [vehicleMakes, setVehicleMakes] = useState({});
     const formRef = useRef(null);
+    const [vehicleMakesFilter, setVehicleMakesFilter] = useState({});
+
+    useEffect(() => {
+        const fetchAndLog = async () => {
+            await vehicleMakeStore.fetchVehicles();
+
+            setVehicleMakesFilter(vehicleMakeStore.getNameAndId);
+        };
+
+        fetchAndLog();
+    }, []);
+
+    const fetchMakeName = async (makeId) => {
+        if (vehicleMakes[makeId]) {
+            return vehicleMakes[makeId];
+        }
+        try {
+            const response = await get(`/vehiclemake/${makeId}`);
+            const name = response.data.name;
+            setVehicleMakes(prev => ({ ...prev, [makeId]: name }));
+
+            return name;
+        } catch (error) {
+            console.error(`Greška pri dohvaćanju imena za makeId ${makeId}:`, error);
+            return makeId;
+        }
+
+    };
+
+    useEffect(() => {
+        const fetchAllMakeNames = async () => {
+            const uniqueMakeIds = [...new Set(vehicleModelStore.vehicles.map(v => v.makeId))];
+            const promises = uniqueMakeIds.map(id => fetchMakeName(id));
+            await Promise.all(promises);
+        };
+        fetchAllMakeNames();
+    }, [vehicleModelStore.vehicles]);
 
     useEffect(() => {
         if (vehicleModelStore.editingVehicle && formRef.current) {
@@ -35,6 +76,21 @@ const VehicleModelTable = observer(() => {
                     value={vehicleModelStore.searchAbrv}
                     onChange={(e) => vehicleModelStore.setSearchAbrv(e.target.value)}
                 />
+
+                <select
+                    className="select_label"
+                    value={vehicleModelStore.searchMakeId}
+                    onChange={(e) => vehicleModelStore.setSearchMakeId(e.target.value)}
+                >
+                    <option value="">All producers</option>
+                    {vehicleMakesFilter && Array.isArray(vehicleMakesFilter) &&
+                        vehicleMakesFilter.map((make) => (
+                            <option key={make.id} value={make.id}>
+                                {make.name}
+                            </option>
+                        ))}
+                </select>
+
 
                 <label className="select_label"> Items per page
                     <select
@@ -78,7 +134,7 @@ const VehicleModelTable = observer(() => {
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th> Abbreviation</th>
+                        <th>Abbreviation</th>
                         <th>Made by</th>
                         <th>Actions</th>
                     </tr>
@@ -89,7 +145,7 @@ const VehicleModelTable = observer(() => {
                             <td>{(vehicleModelStore.currentPage - 1) * vehicleModelStore.vehiclesPerPage + index + 1}</td>
                             <td>{vehicle.name}</td>
                             <td>{vehicle.abrv}</td>
-                            <td>{vehicle.makeId}</td>
+                            <td>{vehicleMakes[vehicle.makeId] || vehicle.makeId}</td>
                             <td>
                                 <button className="edit-btn" onClick={() => vehicleModelStore.setEditingVehicle(vehicle)}>
                                     Edit

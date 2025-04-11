@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #2563eb; /* Tailwind blue-600 */
+    background-color: #2563eb; 
     color: white;
     padding: 12px 24px;
     display: flex;
@@ -20,14 +20,20 @@
     margin: 0;
     padding: 0;
   }
-  
-  .navbar-links li a {
+    
+  .nav-link {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
-  .navbar-links li a:hover {
-    color: #d1d5db; /* Tailwind gray-300 */
+  .nav-link:hover {
+    color: #d1d5db;
+  }
+  
+  .nav-link.active {
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
   }
   

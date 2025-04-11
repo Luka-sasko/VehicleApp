@@ -1,22 +1,20 @@
+// Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../Styles/Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/">Home</Link>
-      </div>
       <ul className="navbar-links">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
         </li>
         <li>
-          <Link to="/vehicleMake">VehicleMake</Link>
+          <NavLink to="/vehicle-makes" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Vehicle Make</NavLink>
         </li>
         <li>
-          <Link to="/vehicleModel">VehicleModel</Link>
+          <NavLink to="/vehicle-models" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Vehicle Model</NavLink>
         </li>
       </ul>
     </nav>

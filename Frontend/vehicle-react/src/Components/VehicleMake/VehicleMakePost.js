@@ -22,7 +22,7 @@ const VehicleMakePost = observer(() => {
 
   return (
     <div className="edit-form">
-      <h3>New Vehicle</h3>
+      <h3>New  Vehicle Make</h3>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input 
