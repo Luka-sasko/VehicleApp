@@ -30,19 +30,19 @@ const VehicleMakeEdit = observer(() => {
       <h3>Edit Vehicle</h3>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
-        <input 
-          type="text" 
-          name="name" 
-          value={vehicle.name} 
-          onChange={handleChange} 
+        <input
+          type="text"
+          name="name"
+          value={vehicle.name}
+          onChange={handleChange}
         />
 
         <label>Abbreviation:</label>
-        <input 
-          type="text" 
-          name="abrv" 
-          value={vehicle.abrv} 
-          onChange={handleChange} 
+        <input
+          type="text"
+          name="abrv"
+          value={vehicle.abrv}
+          onChange={handleChange}
         />
 
         <button type="submit" className="save-btn">Save</button>

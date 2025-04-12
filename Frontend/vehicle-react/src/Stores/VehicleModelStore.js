@@ -57,7 +57,7 @@ class VehicleModelStore {
     async addVehicle(vehicle) {
         try {
             await post('/vehiclemodel/', vehicle);
-            this.newVehicle = { name: '', abrv: '',makeId: '' }
+            this.newVehicle = { name: '', abrv: '', makeId: '' }
             await this.fetchVehicles();
         } catch (error) {
             console.error('Error adding vehicle:', error);
@@ -87,58 +87,58 @@ class VehicleModelStore {
     }
 
 
-    setCurrentPage(page){
+    setCurrentPage(page) {
         this.currentPage = page;
         this.fetchVehicles();
     }
 
-    setVehiclesPerPage(count){
+    setVehiclesPerPage(count) {
         this.vehiclesPerPage = count;
         this.currentPage = 1;
         this.fetchVehicles();
     }
 
-    setEditingVehicle(vehicle){
+    setEditingVehicle(vehicle) {
         this.editingVehicle = vehicle
     }
 
-    setSortBy(sort){
+    setSortBy(sort) {
         this.sortBy = sort;
         this.fetchVehicles();
     }
 
-    setSortOrder(order){
+    setSortOrder(order) {
         this.sortOrder = order;
         this.fetchVehicles();
     }
 
-    setsearchName(name){
-        this.searchName=name;
-        this.currentPage=1;
+    setSearchName(name) {
+        this.searchName = name;
+        this.currentPage = 1;
         this.fetchVehicles();
     }
 
-    setSearchAbrv(abrv){
-        this.searchAbrv=abrv;
-        this.currentPage=1;
+    setSearchAbrv(abrv) {
+        this.searchAbrv = abrv;
+        this.currentPage = 1;
         this.fetchVehicles();
     }
 
-    setSearchMakeId(makeId){
-        this.searchMakeId=makeId;
-        this.currentPage=1;
+    setSearchMakeId(makeId) {
+        this.searchMakeId = makeId;
+        this.currentPage = 1;
         this.fetchVehicles();
     }
 
-    setVehicles(vehicles){
-        this.vehicles=vehicles;
+    setVehicles(vehicles) {
+        this.vehicles = vehicles;
     }
 
-    setTotalCount(total){
-        this.totalCount=total;
+    setTotalCount(total) {
+        this.totalCount = total;
     }
 
-    get totalPages(){
+    get totalPages() {
         return Math.ceil(this.totalCount / this.vehiclesPerPage) || 1;
     }
 

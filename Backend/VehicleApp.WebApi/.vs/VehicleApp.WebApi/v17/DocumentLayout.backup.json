@@ -75,7 +75,7 @@
               "RelativeDocumentMoniker": "..\\VehicleApp.DAL\\VehicleContext.cs",
               "ToolTip": "F:\\Mono_VehicleAPP\\Backend\\VehicleApp.DAL\\VehicleContext.cs",
               "RelativeToolTip": "..\\VehicleApp.DAL\\VehicleContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-11T09:14:42.092Z",
               "EditorCaption": ""
@@ -126,8 +126,7 @@
               "RelativeToolTip": "..\\VehicleApp.Repository\\GenericRepository.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAAADUAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:33:25.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T14:33:25.218Z"
             },
             {
               "$type": "Document",
@@ -163,8 +162,7 @@
               "RelativeToolTip": "Controllers\\VehicleModelController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAcwCsAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:32:02.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T17:32:02.75Z"
             },
             {
               "$type": "Document",

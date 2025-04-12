@@ -18,26 +18,27 @@ const VehicleMakePost = observer(() => {
       return;
     }
     vehicleMakeStore.addVehicle(vehicleMakeStore.newVehicle);
+
   };
 
   return (
     <div className="edit-form">
-      <h3>New  Vehicle Make</h3>
+      <h3>Add new  Vehicle Make</h3>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
-        <input 
-          type="text" 
-          name="name" 
-          value={vehicleMakeStore.newVehicle.name} 
-          onChange={handleChange} 
+        <input
+          type="text"
+          name="name"
+          value={vehicleMakeStore.newVehicle.name}
+          onChange={handleChange}
         />
 
         <label>Abbreviation:</label>
-        <input 
-          type="text" 
-          name="abrv" 
-          value={vehicleMakeStore.newVehicle.abrv} 
-          onChange={handleChange} 
+        <input
+          type="text"
+          name="abrv"
+          value={vehicleMakeStore.newVehicle.abrv}
+          onChange={handleChange}
         />
 
         <button type="submit" className="save-btn">Save</button>

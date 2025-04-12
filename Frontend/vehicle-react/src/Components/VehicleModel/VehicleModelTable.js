@@ -1,53 +1,26 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { get } from '../../Api/base_api';
 import { observer } from 'mobx-react-lite';
 import { vehicleModelStore } from '../../Stores/VehicleModelStore';
 import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
-
 import VehicleModelEdit from './VehicleModelEdit';
 import '../../Styles/VehicleMakeTable.css';
 
 const VehicleModelTable = observer(() => {
-
-    const [vehicleMakes, setVehicleMakes] = useState({});
+    const [vehicleMakes, setVehicleMakes] = useState([]);
     const formRef = useRef(null);
-    const [vehicleMakesFilter, setVehicleMakesFilter] = useState({});
 
     useEffect(() => {
-        const fetchAndLog = async () => {
-            await vehicleMakeStore.fetchVehicles();
-
-            setVehicleMakesFilter(vehicleMakeStore.getNameAndId);
+        const fetchData = async () => {
+            try {
+                await vehicleMakeStore.fetchVehicles();
+                setVehicleMakes(vehicleMakeStore.getNameAndId || []);
+            } catch (error) {
+                console.error('Failed to fetch vehicle makes:', error);
+            }
         };
 
-        fetchAndLog();
+        fetchData();
     }, []);
-
-    const fetchMakeName = async (makeId) => {
-        if (vehicleMakes[makeId]) {
-            return vehicleMakes[makeId];
-        }
-        try {
-            const response = await get(`/vehiclemake/${makeId}`);
-            const name = response.data.name;
-            setVehicleMakes(prev => ({ ...prev, [makeId]: name }));
-
-            return name;
-        } catch (error) {
-            console.error(`Greška pri dohvaćanju imena za makeId ${makeId}:`, error);
-            return makeId;
-        }
-
-    };
-
-    useEffect(() => {
-        const fetchAllMakeNames = async () => {
-            const uniqueMakeIds = [...new Set(vehicleModelStore.vehicles.map(v => v.makeId))];
-            const promises = uniqueMakeIds.map(id => fetchMakeName(id));
-            await Promise.all(promises);
-        };
-        fetchAllMakeNames();
-    }, [vehicleModelStore.vehicles]);
 
     useEffect(() => {
         if (vehicleModelStore.editingVehicle && formRef.current) {
@@ -66,13 +39,13 @@ const VehicleModelTable = observer(() => {
             <div className="filters">
                 <input
                     type="text"
-                    placeholder='Filter by name'
+                    placeholder="Search by name"
                     value={vehicleModelStore.searchName}
                     onChange={(e) => vehicleModelStore.setSearchName(e.target.value)}
                 />
                 <input
                     type="text"
-                    placeholder="Filter by abbreviation"
+                    placeholder="Search by abbreviation"
                     value={vehicleModelStore.searchAbrv}
                     onChange={(e) => vehicleModelStore.setSearchAbrv(e.target.value)}
                 />
@@ -83,16 +56,15 @@ const VehicleModelTable = observer(() => {
                     onChange={(e) => vehicleModelStore.setSearchMakeId(e.target.value)}
                 >
                     <option value="">All producers</option>
-                    {vehicleMakesFilter && Array.isArray(vehicleMakesFilter) &&
-                        vehicleMakesFilter.map((make) => (
-                            <option key={make.id} value={make.id}>
-                                {make.name}
-                            </option>
-                        ))}
+                    {vehicleMakes.map((make) => (
+                        <option key={make.id} value={make.id}>
+                            {make.name}
+                        </option>
+                    ))}
                 </select>
 
-
-                <label className="select_label"> Items per page
+                <label className="select_label">
+                    Items per page
                     <select
                         className="select_label"
                         value={vehicleModelStore.vehiclesPerPage}
@@ -104,7 +76,8 @@ const VehicleModelTable = observer(() => {
                     </select>
                 </label>
 
-                <label className="select_label"> Sorted
+                <label className="select_label">
+                    Sorted
                     <select
                         className="select_label"
                         value={vehicleModelStore.sortOrder}
@@ -115,7 +88,8 @@ const VehicleModelTable = observer(() => {
                     </select>
                 </label>
 
-                <label className="select_label"> Sorted
+                <label className="select_label">
+                    Sorted
                     <select
                         className="select_label"
                         value={vehicleModelStore.sortBy}
@@ -123,19 +97,18 @@ const VehicleModelTable = observer(() => {
                     >
                         <option value="Name">Name</option>
                         <option value="Abrv">Abrv</option>
-                        <option value="MakeId">Producer</option>
+                        <option value="MakeId">Maker</option>
                     </select>
                 </label>
-
             </div>
 
             <table id="vehicles-table" className="styled-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Abbreviation</th>
-                        <th>Made by</th>
+                        <th onClick={() => vehicleModelStore.setSortBy('MakeId')}>Made by</th>
+                        <th onClick={() => vehicleModelStore.setSortBy('Name')}>Name</th>
+                        <th onClick={() => vehicleModelStore.setSortBy('Abrv')}>Abbreviation</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -143,16 +116,12 @@ const VehicleModelTable = observer(() => {
                     {vehicleModelStore.vehicles.map((vehicle, index) => (
                         <tr key={vehicle.id}>
                             <td>{(vehicleModelStore.currentPage - 1) * vehicleModelStore.vehiclesPerPage + index + 1}</td>
+                            <td>{vehicleMakes.find(make => make.id === vehicle.makeId)?.name || vehicle.makeId}</td>
                             <td>{vehicle.name}</td>
                             <td>{vehicle.abrv}</td>
-                            <td>{vehicleMakes[vehicle.makeId] || vehicle.makeId}</td>
                             <td>
-                                <button className="edit-btn" onClick={() => vehicleModelStore.setEditingVehicle(vehicle)}>
-                                    Edit
-                                </button>
-                                <button className="delete-btn" onClick={() => handleDelete(vehicle.id)}>
-                                    Delete
-                                </button>
+                                <button className="edit-btn" onClick={() => vehicleModelStore.setEditingVehicle(vehicle)}> Edit</button>
+                                <button className="delete-btn" onClick={() => handleDelete(vehicle.id)}>Delete</button>
                             </td>
                         </tr>
                     ))}
@@ -173,7 +142,6 @@ const VehicleModelTable = observer(() => {
                 ) : (
                     <span>No pages available</span>
                 )}
-
             </div>
 
             {vehicleModelStore.editingVehicle && (
@@ -181,10 +149,8 @@ const VehicleModelTable = observer(() => {
                     <VehicleModelEdit />
                 </div>
             )}
-
         </div>
     );
-
 });
 
 export default VehicleModelTable;

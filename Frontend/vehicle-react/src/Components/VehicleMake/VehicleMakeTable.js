@@ -24,13 +24,13 @@ const VehicleMakeTable = observer(() => {
             <div className="filters">
                 <input
                     type="text"
-                    placeholder="Filter by name"
+                    placeholder="Search by name"
                     value={vehicleMakeStore.searchName}
                     onChange={(e) => vehicleMakeStore.setSearchName(e.target.value)}
                 />
                 <input
                     type="text"
-                    placeholder="Filter by abbreviation"
+                    placeholder="Search by abbreviation"
                     value={vehicleMakeStore.searchAbrv}
                     onChange={(e) => vehicleMakeStore.setSearchAbrv(e.target.value)}
                 />
@@ -56,27 +56,26 @@ const VehicleMakeTable = observer(() => {
                         <option value="desc">DESC</option>
                     </select>
                 </label>
+
+                <label className="select_label">
+                    Sorted
+                    <select
+                        className="select_label"
+                        value={vehicleMakeStore.sortBy}
+                        onChange={(e) => vehicleMakeStore.setSortBy(e.target.value)}
+                    >
+                        <option value="Name">Name</option>
+                        <option value="Abrv">Abrv</option>
+                    </select>
+                </label>
             </div>
 
             <table id="vehicles-table" className="styled-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>
-                            Name
-                            <button onClick={() => {
-                                vehicleMakeStore.setSortBy('Name');
-                            }}>
-                            </button>
-                        </th>
-                        <th>
-                            Abbreviation
-                            <button onClick={() => {
-                                vehicleMakeStore.setSortBy('Abrv');
-                            }}>
-
-                            </button>
-                        </th>
+                        <th onClick={() => vehicleMakeStore.setSortBy('Name')}>Name</th>
+                        <th onClick={() => vehicleMakeStore.setSortBy('Abrv')}>Abbreviation</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

@@ -38,18 +38,17 @@ const VehicleModelPost = observer(() => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, abrv, makeId } = vehicleModelStore.newVehicle;
-    
+
     if (!name?.trim() || !abrv?.trim() || !makeId) {
       alert("All fields must be filled!");
       return;
     }
-    
     vehicleModelStore.addVehicle(vehicleModelStore.newVehicle);
   };
 
   return (
     <div className="edit-form">
-      <h3>New Vehicle Model</h3>
+      <h3>Add new Vehicle Model</h3>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input

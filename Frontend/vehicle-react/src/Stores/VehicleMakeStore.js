@@ -28,7 +28,7 @@ class VehicleMakeStore {
       setSearchAbrv: action,
       setVehicles: action,
       setTotalCount: action
-        });
+    });
   }
 
   async fetchVehicles() {
@@ -46,9 +46,9 @@ class VehicleMakeStore {
       this.setVehicles(response.data.items);
       this.setTotalCount(response.data.totalCount);
     } catch (error) {
-        this.setVehicles([]);
-        this.setTotalCount(0);
-        console.error('Error fetching vehicles:', error);
+      this.setVehicles([]);
+      this.setTotalCount(0);
+      console.error('Error fetching vehicles:', error);
     }
   }
 
@@ -97,6 +97,7 @@ class VehicleMakeStore {
   }
 
   setSortBy(sort) {
+    console.log('Sorting by:', sort);
     this.sortBy = sort;
     this.fetchVehicles();
   }
@@ -132,7 +133,7 @@ class VehicleMakeStore {
       id: v.id
     }));
   }
-  
+
 
   get totalPages() {
     return Math.ceil(this.totalCount / this.vehiclesPerPage) || 1;
