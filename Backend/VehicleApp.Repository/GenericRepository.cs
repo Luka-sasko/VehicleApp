@@ -20,9 +20,11 @@ namespace VehicleApp.Repository
             _context = context;
             _dbSet = context.Set<T>();
         }
-        public async Task AddAsync(T entity)
+        public async Task<bool> AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
+
+            return await _context.SaveChangesAsync() > 0;
         }
 
 
@@ -61,19 +63,23 @@ namespace VehicleApp.Repository
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task Update(T entity)
+        public async Task<bool> Update(T entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
             _dbSet.Update(entity);
+
+            return await _context.SaveChangesAsync() > 0;
         }
-        public async Task Delete(T entity)
+        public async Task<bool> Delete(T entity)
         {
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity), "Entity cannot be null.");
 
 
             _dbSet.Remove(entity);
+
+            return await _context.SaveChangesAsync() > 0;
         }
 
      

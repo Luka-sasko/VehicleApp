@@ -16,9 +16,9 @@ namespace VehicleApp.Service.Common
         Task<PagedList<VehicleMakeView>> GetAllAsync(Expression<Func<VehicleMake, bool>> predicate, Paging paging, Sorting sorting);
 
         Task<VehicleMakeView> GetVehicleMakeByIdAsync(Guid id);
-        Task AddVehicleMakeAsync(VehicleMake vehicleMake);
-        Task UpdateVehicleMakeAsync(VehicleMake vehicleMake);
-        Task DeleteVehicleMakeAsync(Guid id);
+        Task<bool> AddVehicleMakeAsync(VehicleMake vehicleMake);
+        Task<bool> UpdateVehicleMakeAsync(VehicleMake vehicleMake);
+        Task<bool> DeleteVehicleMakeAsync(Guid id);
     }
 
 }

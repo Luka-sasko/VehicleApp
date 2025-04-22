@@ -14,8 +14,8 @@ namespace VehicleApp.Repository.Common
 
         Task<PagedList<T>> GetAllAsync(Expression<Func<T, bool>> predicate, Paging paging,Sorting sorting);
         Task<T> GetByIdAsync(Guid id);
-        Task AddAsync(T entity);
-        Task Update(T entity);
-        Task Delete(T entity);
+        Task<bool> AddAsync(T entity);
+        Task<bool> Update(T entity);
+        Task<bool> Delete(T entity);
     }
 }

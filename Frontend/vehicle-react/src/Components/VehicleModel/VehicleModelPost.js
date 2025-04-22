@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { vehicleModelStore } from '../../Stores/VehicleModelStore';
-import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
+import { vehicleModelEditPostDelStore } from '../../Stores/VehicleModelEditPostDelStore';
+
+import { vehicleMakeListStore } from '../../Stores/VehicleMakeListStore';
 import '../../Styles/VehicleMakeEdit.css';
 
 const VehicleModelPost = observer(() => {
@@ -10,8 +11,8 @@ const VehicleModelPost = observer(() => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await vehicleMakeStore.fetchVehicles();
-        setVehicleMakes(vehicleMakeStore.getNameAndId || []);
+        await vehicleMakeListStore.fetchVehicles();
+        setVehicleMakes(vehicleMakeListStore.getNameAndId || []);
       } catch (error) {
         console.error('Failed to fetch vehicle makes:', error);
       }
@@ -22,28 +23,28 @@ const VehicleModelPost = observer(() => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    vehicleModelStore.newVehicle = {
-      ...vehicleModelStore.newVehicle,
+    vehicleModelEditPostDelStore.newVehicle = {
+      ...vehicleModelEditPostDelStore.newVehicle,
       [name]: value,
     };
   };
 
   const handleMakeChange = (e) => {
-    vehicleModelStore.newVehicle = {
-      ...vehicleModelStore.newVehicle,
+    vehicleModelEditPostDelStore.newVehicle = {
+      ...vehicleModelEditPostDelStore.newVehicle,
       makeId: e.target.value,
     };
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, abrv, makeId } = vehicleModelStore.newVehicle;
+    const { name, abrv, makeId } = vehicleModelEditPostDelStore.newVehicle;
 
     if (!name?.trim() || !abrv?.trim() || !makeId) {
       alert("All fields must be filled!");
       return;
     }
-    vehicleModelStore.addVehicle(vehicleModelStore.newVehicle);
+    vehicleModelEditPostDelStore.addVehicle(vehicleModelEditPostDelStore.newVehicle);
   };
 
   return (
@@ -54,7 +55,7 @@ const VehicleModelPost = observer(() => {
         <input
           type="text"
           name="name"
-          value={vehicleModelStore.newVehicle?.name || ''}
+          value={vehicleModelEditPostDelStore.newVehicle?.name || ''}
           onChange={handleChange}
         />
 
@@ -62,14 +63,14 @@ const VehicleModelPost = observer(() => {
         <input
           type="text"
           name="abrv"
-          value={vehicleModelStore.newVehicle?.abrv || ''}
+          value={vehicleModelEditPostDelStore.newVehicle?.abrv || ''}
           onChange={handleChange}
         />
 
         <label>Made by:</label>
         <select
           className="select_label"
-          value={vehicleModelStore.newVehicle?.makeId || ''}
+          value={vehicleModelEditPostDelStore.newVehicle?.makeId || ''}
           onChange={handleMakeChange}
           name="makeId"
         >

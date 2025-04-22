@@ -82,9 +82,13 @@ namespace VehicleApp.API.Controllers
             }
 
             var vehicleMake = _mapper.Map<VehicleMake>(vehicleMakeView);
+            var isAdded = false;
             try
             {
-                await _vehicleMakeService.AddVehicleMakeAsync(vehicleMake);
+                isAdded = await _vehicleMakeService.AddVehicleMakeAsync(vehicleMake);
+                if (!isAdded) {
+                    return BadRequest("Error");
+                }
             }
             catch (Exception ex) {  return BadRequest(ex.Message); }
 
@@ -102,27 +106,29 @@ namespace VehicleApp.API.Controllers
 
             var vehicleMake = _mapper.Map<VehicleMake>(vehicleMakeView);
             vehicleMake.Id = id;
+            var isUpdated = false;
             try
             {
-                await _vehicleMakeService.UpdateVehicleMakeAsync(vehicleMake);
+                isUpdated = await _vehicleMakeService.UpdateVehicleMakeAsync(vehicleMake);
             }
             catch (Exception ex) { return BadRequest(ex.Message); }
-            return Ok("Updated");
+            return Ok(isUpdated);
         }
 
         // DELETE: api/vehiclemake/5
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAsync(Guid id)
         {
+            var isDeleted = false;
             try
             {
-                await _vehicleMakeService.DeleteVehicleMakeAsync(id);
+                isDeleted = await _vehicleMakeService.DeleteVehicleMakeAsync(id);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-            return Ok("Deleted");
+            return Ok(isDeleted);
         }
     }
 }

@@ -14,9 +14,9 @@ namespace VehicleApp.Service.Common
         Task<PagedList<VehicleModelView>> GetAllAsync(Expression<Func<VehicleModel, bool>> predicate, Paging paging, Sorting sorting);
 
         Task<VehicleModelView> GetVehicleModelByIdAsync(Guid id);
-        Task AddVehicleModelAsync(VehicleModel vehicleModel);
-        Task UpdateVehicleModelAsync(VehicleModel vehicleModel);
-        Task DeleteVehicleModelAsync(Guid id);
+        Task<bool> AddVehicleModelAsync(VehicleModel vehicleModel);
+        Task<bool> UpdateVehicleModelAsync(VehicleModel vehicleModel);
+        Task<bool> DeleteVehicleModelAsync(Guid id);
     }
 }
 

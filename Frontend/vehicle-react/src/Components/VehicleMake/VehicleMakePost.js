@@ -1,23 +1,23 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
+import { vehicleMakeEditPostDelStore } from '../../Stores/VehicleMakeEditPostDelStore';
 import '../../Styles/VehicleMakeEdit.css';
 
 const VehicleMakePost = observer(() => {
   const handleChange = (e) => {
-    vehicleMakeStore.newVehicle = {
-      ...vehicleMakeStore.newVehicle,
+    vehicleMakeEditPostDelStore.newVehicle = {
+      ...vehicleMakeEditPostDelStore.newVehicle,
       [e.target.name]: e.target.value
     };
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (vehicleMakeStore.newVehicle.name.trim() === "" || vehicleMakeStore.newVehicle.abrv.trim() === "") {
+    if (vehicleMakeEditPostDelStore.newVehicle.name.trim() === "" || vehicleMakeEditPostDelStore.newVehicle.abrv.trim() === "") {
       alert("Sva polja moraju biti popunjena!");
       return;
     }
-    vehicleMakeStore.addVehicle(vehicleMakeStore.newVehicle);
+    vehicleMakeEditPostDelStore.addVehicle(vehicleMakeEditPostDelStore.newVehicle);
 
   };
 
@@ -29,7 +29,7 @@ const VehicleMakePost = observer(() => {
         <input
           type="text"
           name="name"
-          value={vehicleMakeStore.newVehicle.name}
+          value={vehicleMakeEditPostDelStore.newVehicle.name}
           onChange={handleChange}
         />
 
@@ -37,7 +37,7 @@ const VehicleMakePost = observer(() => {
         <input
           type="text"
           name="abrv"
-          value={vehicleMakeStore.newVehicle.abrv}
+          value={vehicleMakeEditPostDelStore.newVehicle.abrv}
           onChange={handleChange}
         />
 

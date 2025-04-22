@@ -1,25 +1,25 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { vehicleModelStore } from '../../Stores/VehicleModelStore';
 import '../../Styles/VehicleMakeEdit.css';
+import { vehicleModelEditPostDelStore } from '../../Stores/VehicleModelEditPostDelStore';
 
 const VehicleModelEdit = observer(() => {
-    const vehicle = vehicleModelStore.editingVehicle;
+    const vehicle = vehicleModelEditPostDelStore.editingVehicle;
 
     const handleChange = (e) => {
-        vehicleModelStore.editingVehicle = {
-            ...vehicleModelStore.editingVehicle,
+        vehicleModelEditPostDelStore.editingVehicle = {
+            ...vehicleModelEditPostDelStore.editingVehicle,
             [e.target.name]: e.target.value
         };
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        vehicleModelStore.updateVehicle(vehicleModelStore.editingVehicle);
+        vehicleModelEditPostDelStore.updateVehicle(vehicleModelEditPostDelStore.editingVehicle);
     };
 
     const handleCancel = () => {
-        vehicleModelStore.setEditingVehicle(null);
+        vehicleModelEditPostDelStore.setEditingVehicle(null);
     };
 
     if (!vehicle) return null;

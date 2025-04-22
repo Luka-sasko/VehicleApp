@@ -1,33 +1,38 @@
-import { makeAutoObservable, action } from 'mobx';
-import { get, post, put, remove } from '../Api/base_api';
+import { makeObservable, action, observable, computed } from 'mobx';
+import { vehicleMakeService } from '../Services/vehicleMakeService';
 
-class VehicleMakeStore {
+class VehicleMakeListStore {
   vehicles = [];
   totalCount = 0;
   currentPage = 1;
   vehiclesPerPage = 10;
-  editingVehicle = null;
-  newVehicle = { name: '', abrv: '' };
   sortBy = 'Name';
   sortOrder = 'asc';
   searchName = '';
   searchAbrv = '';
 
   constructor() {
-    makeAutoObservable(this, {
+    makeObservable(this, {
+      vehicles : observable,
+      totalCount : observable,
+      currentPage : observable,
+      vehiclesPerPage : observable,
+      sortBy : observable,
+      sortOrder : observable,
+      searchAbrv : observable,
+      searchName : observable,
+
       fetchVehicles: action,
-      addVehicle: action,
-      updateVehicle: action,
-      deleteVehicle: action,
       setCurrentPage: action,
       setVehiclesPerPage: action,
-      setEditingVehicle: action,
       setSortBy: action,
       setSortOrder: action,
       setSearchName: action,
       setSearchAbrv: action,
       setVehicles: action,
-      setTotalCount: action
+      setTotalCount: action,
+
+      totalPages : computed
     });
   }
 
@@ -42,42 +47,13 @@ class VehicleMakeStore {
         pageSize: this.vehiclesPerPage
       });
 
-      const response = await get(`/vehiclemake?${params.toString()}`);
+      const response = await vehicleMakeService.fetchAll(params);
       this.setVehicles(response.data.items);
       this.setTotalCount(response.data.totalCount);
     } catch (error) {
       this.setVehicles([]);
       this.setTotalCount(0);
       console.error('Error fetching vehicles:', error);
-    }
-  }
-
-  async addVehicle(vehicle) {
-    try {
-      await post('/vehiclemake/', vehicle);
-      this.newVehicle = { name: '', abrv: '' };
-      await this.fetchVehicles();
-    } catch (error) {
-      console.error('Error adding vehicle:', error);
-    }
-  }
-
-  async updateVehicle(vehicle) {
-    try {
-      await put(`/vehiclemake/${vehicle.id}`, vehicle);
-      this.editingVehicle = null;
-      await this.fetchVehicles();
-    } catch (error) {
-      console.error('Error updating vehicle:', error);
-    }
-  }
-
-  async deleteVehicle(id) {
-    try {
-      await remove(`/vehiclemake/${id}`);
-      await this.fetchVehicles();
-    } catch (error) {
-      console.error('Error deleting vehicle:', error);
     }
   }
 
@@ -90,10 +66,6 @@ class VehicleMakeStore {
     this.vehiclesPerPage = count;
     this.currentPage = 1;
     this.fetchVehicles();
-  }
-
-  setEditingVehicle(vehicle) {
-    this.editingVehicle = vehicle;
   }
 
   setSortBy(sort) {
@@ -134,10 +106,9 @@ class VehicleMakeStore {
     }));
   }
 
-
   get totalPages() {
     return Math.ceil(this.totalCount / this.vehiclesPerPage) || 1;
   }
 }
 
-export const vehicleMakeStore = new VehicleMakeStore();
+export const vehicleMakeListStore = new VehicleMakeListStore();

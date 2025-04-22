@@ -1,7 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import { vehicleModelStore } from '../../Stores/VehicleModelStore';
-import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
+import { vehicleModelListStore } from '../../Stores/VehicleModelListStore';
+import { vehicleModelEditPostDelStore } from '../../Stores/VehicleModelEditPostDelStore';
+
+import { vehicleMakeListStore } from '../../Stores/VehicleMakeListStore';
 import VehicleModelEdit from './VehicleModelEdit';
 import '../../Styles/VehicleMakeTable.css';
 
@@ -12,8 +14,8 @@ const VehicleModelTable = observer(() => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                await vehicleMakeStore.fetchVehicles();
-                setVehicleMakes(vehicleMakeStore.getNameAndId || []);
+                await vehicleMakeListStore.fetchVehicles();
+                setVehicleMakes(vehicleMakeListStore.getNameAndId || []);
             } catch (error) {
                 console.error('Failed to fetch vehicle makes:', error);
             }
@@ -23,14 +25,14 @@ const VehicleModelTable = observer(() => {
     }, []);
 
     useEffect(() => {
-        if (vehicleModelStore.editingVehicle && formRef.current) {
+        if (vehicleModelEditPostDelStore.editingVehicle && formRef.current) {
             formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, [vehicleModelStore.editingVehicle]);
+    }, [vehicleModelEditPostDelStore.editingVehicle]);
 
     const handleDelete = (id) => {
         if (window.confirm('Are you sure you want to delete this vehicle?')) {
-            vehicleModelStore.deleteVehicle(id);
+            vehicleModelEditPostDelStore.deleteVehicle(id);
         }
     };
 
@@ -40,20 +42,20 @@ const VehicleModelTable = observer(() => {
                 <input
                     type="text"
                     placeholder="Search by name"
-                    value={vehicleModelStore.searchName}
-                    onChange={(e) => vehicleModelStore.setSearchName(e.target.value)}
+                    value={vehicleModelListStore.searchName}
+                    onChange={(e) => vehicleModelListStore.setSearchName(e.target.value)}
                 />
                 <input
                     type="text"
                     placeholder="Search by abbreviation"
-                    value={vehicleModelStore.searchAbrv}
-                    onChange={(e) => vehicleModelStore.setSearchAbrv(e.target.value)}
+                    value={vehicleModelListStore.searchAbrv}
+                    onChange={(e) => vehicleModelListStore.setSearchAbrv(e.target.value)}
                 />
 
                 <select
                     className="select_label"
-                    value={vehicleModelStore.searchMakeId}
-                    onChange={(e) => vehicleModelStore.setSearchMakeId(e.target.value)}
+                    value={vehicleModelListStore.searchMakeId}
+                    onChange={(e) => vehicleModelListStore.setSearchMakeId(e.target.value)}
                 >
                     <option value="">All producers</option>
                     {vehicleMakes.map((make) => (
@@ -67,8 +69,8 @@ const VehicleModelTable = observer(() => {
                     Items per page
                     <select
                         className="select_label"
-                        value={vehicleModelStore.vehiclesPerPage}
-                        onChange={(e) => vehicleModelStore.setVehiclesPerPage(Number(e.target.value))}
+                        value={vehicleModelListStore.vehiclesPerPage}
+                        onChange={(e) => vehicleModelListStore.setVehiclesPerPage(Number(e.target.value))}
                     >
                         <option value="5">5</option>
                         <option value="10">10</option>
@@ -80,8 +82,8 @@ const VehicleModelTable = observer(() => {
                     Sorted
                     <select
                         className="select_label"
-                        value={vehicleModelStore.sortOrder}
-                        onChange={(e) => vehicleModelStore.setSortOrder(e.target.value)}
+                        value={vehicleModelListStore.sortOrder}
+                        onChange={(e) => vehicleModelListStore.setSortOrder(e.target.value)}
                     >
                         <option value="asc">ASC</option>
                         <option value="desc">DESC</option>
@@ -92,8 +94,8 @@ const VehicleModelTable = observer(() => {
                     Sorted
                     <select
                         className="select_label"
-                        value={vehicleModelStore.sortBy}
-                        onChange={(e) => vehicleModelStore.setSortBy(e.target.value)}
+                        value={vehicleModelListStore.sortBy}
+                        onChange={(e) => vehicleModelListStore.setSortBy(e.target.value)}
                     >
                         <option value="Name">Name</option>
                         <option value="Abrv">Abrv</option>
@@ -106,21 +108,21 @@ const VehicleModelTable = observer(() => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th onClick={() => vehicleModelStore.setSortBy('MakeId')}>Made by</th>
-                        <th onClick={() => vehicleModelStore.setSortBy('Name')}>Name</th>
-                        <th onClick={() => vehicleModelStore.setSortBy('Abrv')}>Abbreviation</th>
+                        <th onClick={() => vehicleModelListStore.setSortBy('MakeId')}>Made by</th>
+                        <th onClick={() => vehicleModelListStore.setSortBy('Name')}>Name</th>
+                        <th onClick={() => vehicleModelListStore.setSortBy('Abrv')}>Abbreviation</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {vehicleModelStore.vehicles.map((vehicle, index) => (
+                    {vehicleModelListStore.vehicles.map((vehicle, index) => (
                         <tr key={vehicle.id}>
-                            <td>{(vehicleModelStore.currentPage - 1) * vehicleModelStore.vehiclesPerPage + index + 1}</td>
+                            <td>{(vehicleModelListStore.currentPage - 1) * vehicleModelListStore.vehiclesPerPage + index + 1}</td>
                             <td>{vehicleMakes.find(make => make.id === vehicle.makeId)?.name || vehicle.makeId}</td>
                             <td>{vehicle.name}</td>
                             <td>{vehicle.abrv}</td>
                             <td>
-                                <button className="edit-btn" onClick={() => vehicleModelStore.setEditingVehicle(vehicle)}> Edit</button>
+                                <button className="edit-btn" onClick={() => vehicleModelEditPostDelStore.setEditingVehicle(vehicle)}> Edit</button>
                                 <button className="delete-btn" onClick={() => handleDelete(vehicle.id)}>Delete</button>
                             </td>
                         </tr>
@@ -129,12 +131,12 @@ const VehicleModelTable = observer(() => {
             </table>
 
             <div className="pagination">
-                {vehicleModelStore.totalPages > 0 ? (
-                    Array.from({ length: vehicleModelStore.totalPages }, (_, i) => (
+                {vehicleModelListStore.totalPages > 0 ? (
+                    Array.from({ length: vehicleModelListStore.totalPages }, (_, i) => (
                         <button
                             key={i + 1}
-                            onClick={() => vehicleModelStore.setCurrentPage(i + 1)}
-                            className={vehicleModelStore.currentPage === i + 1 ? 'active' : ''}
+                            onClick={() => vehicleModelListStore.setCurrentPage(i + 1)}
+                            className={vehicleModelListStore.currentPage === i + 1 ? 'active' : ''}
                         >
                             {i + 1}
                         </button>
@@ -144,7 +146,7 @@ const VehicleModelTable = observer(() => {
                 )}
             </div>
 
-            {vehicleModelStore.editingVehicle && (
+            {vehicleModelEditPostDelStore.editingVehicle && (
                 <div ref={formRef}>
                     <VehicleModelEdit />
                 </div>

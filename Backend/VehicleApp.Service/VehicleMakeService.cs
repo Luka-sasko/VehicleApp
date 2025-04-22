@@ -43,36 +43,42 @@ namespace VehicleApp.Service
             
         }
 
-        public async Task AddVehicleMakeAsync(VehicleMake vehicleMake)
+        public async Task<bool> AddVehicleMakeAsync(VehicleMake vehicleMake)
         {
             if (vehicleMake == null)
             {
                 throw new ArgumentNullException(nameof(vehicleMake), "Vehicle model cannot be null");
             }
-            await _unitOfWork.GetRepository<VehicleMake>().AddAsync(vehicleMake);
+            var isAdded = await _unitOfWork.GetRepository<VehicleMake>().AddAsync(vehicleMake);
             await _unitOfWork.CommitAsync();
+            return isAdded;
         }
 
-        public async Task UpdateVehicleMakeAsync(VehicleMake vehicleMake)
+        public async Task<bool> UpdateVehicleMakeAsync(VehicleMake vehicleMake)
 
         {
             if (vehicleMake == null)
             {
                 throw new ArgumentNullException(nameof(vehicleMake), "Vehicle model cannot be null");
             }
-            await _unitOfWork.GetRepository<VehicleMake>().Update(vehicleMake);
+            var isUpdated = await _unitOfWork.GetRepository<VehicleMake>().Update(vehicleMake);
             await _unitOfWork.CommitAsync();
+            return isUpdated;
         }
 
-        public async Task DeleteVehicleMakeAsync(Guid id)
+        public async Task<bool> DeleteVehicleMakeAsync(Guid id)
         {
             var repository = _unitOfWork.GetRepository<VehicleMake>();
             var entity = await repository.GetByIdAsync(id);
+            var isDeleted = false;
             if (entity != null)
             {
-                await repository.Delete(entity);
+                isDeleted = await repository.Delete(entity);
                 await _unitOfWork.CommitAsync();
+
             }
+             return isDeleted;
+
         }
 
     }

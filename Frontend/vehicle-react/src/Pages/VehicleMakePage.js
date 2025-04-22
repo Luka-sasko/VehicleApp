@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import VehicleMakeTable from '../Components/VehicleMake/VehicleMakeTable';
 import VehicleMakePost from '../Components/VehicleMake/VehicleMakePost';
-import { vehicleMakeStore } from '../Stores/VehicleMakeStore';
+import { vehicleMakeListStore } from '../Stores/VehicleMakeListStore';
 import '../Styles/VehicleMakePage.css';
 
 const VehicleMakePage = observer(() => {
   useEffect(() => {
-    vehicleMakeStore.fetchVehicles();
+    vehicleMakeListStore.fetchVehicles();
   }, []);
 
   return (

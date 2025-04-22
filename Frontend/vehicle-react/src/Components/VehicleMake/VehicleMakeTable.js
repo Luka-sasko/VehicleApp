@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { vehicleMakeStore } from '../../Stores/VehicleMakeStore';
+import { vehicleMakeListStore } from '../../Stores/VehicleMakeListStore';
+import { vehicleMakeEditPostDelStore } from '../../Stores/VehicleMakeEditPostDelStore';
 import VehicleMakeEdit from './VehicleMakeEdit';
 import '../../Styles/VehicleMakeTable.css';
 
@@ -8,14 +9,14 @@ const VehicleMakeTable = observer(() => {
     const formRef = useRef(null);
 
     useEffect(() => {
-        if (vehicleMakeStore.editingVehicle && formRef.current) {
+        if (vehicleMakeListStore.editingVehicle && formRef.current) {
             formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, [vehicleMakeStore.editingVehicle]);
+    }, [vehicleMakeListStore.editingVehicle]);
 
     const handleDelete = (id) => {
         if (window.confirm('Are you sure you want to delete this vehicle?')) {
-            vehicleMakeStore.deleteVehicle(id);
+            vehicleMakeEditPostDelStore.deleteVehicle(id);
         }
     };
 
@@ -25,20 +26,20 @@ const VehicleMakeTable = observer(() => {
                 <input
                     type="text"
                     placeholder="Search by name"
-                    value={vehicleMakeStore.searchName}
-                    onChange={(e) => vehicleMakeStore.setSearchName(e.target.value)}
+                    value={vehicleMakeListStore.searchName}
+                    onChange={(e) => vehicleMakeListStore.setSearchName(e.target.value)}
                 />
                 <input
                     type="text"
                     placeholder="Search by abbreviation"
-                    value={vehicleMakeStore.searchAbrv}
-                    onChange={(e) => vehicleMakeStore.setSearchAbrv(e.target.value)}
+                    value={vehicleMakeListStore.searchAbrv}
+                    onChange={(e) => vehicleMakeListStore.setSearchAbrv(e.target.value)}
                 />
                 <label className="select_label"> Items per page
                     <select
                         className="select_label"
-                        value={vehicleMakeStore.vehiclesPerPage}
-                        onChange={(e) => vehicleMakeStore.setVehiclesPerPage(Number(e.target.value))}
+                        value={vehicleMakeListStore.vehiclesPerPage}
+                        onChange={(e) => vehicleMakeListStore.setVehiclesPerPage(Number(e.target.value))}
                     >
                         <option value="5">5</option>
                         <option value="10">10</option>
@@ -49,8 +50,8 @@ const VehicleMakeTable = observer(() => {
                 <label className="select_label"> Sorted
                     <select
                         className="select_label"
-                        value={vehicleMakeStore.sortOrder}
-                        onChange={(e) => vehicleMakeStore.setSortOrder(e.target.value)}
+                        value={vehicleMakeListStore.sortOrder}
+                        onChange={(e) => vehicleMakeListStore.setSortOrder(e.target.value)}
                     >
                         <option value="asc">ASC</option>
                         <option value="desc">DESC</option>
@@ -61,8 +62,8 @@ const VehicleMakeTable = observer(() => {
                     Sorted
                     <select
                         className="select_label"
-                        value={vehicleMakeStore.sortBy}
-                        onChange={(e) => vehicleMakeStore.setSortBy(e.target.value)}
+                        value={vehicleMakeListStore.sortBy}
+                        onChange={(e) => vehicleMakeListStore.setSortBy(e.target.value)}
                     >
                         <option value="Name">Name</option>
                         <option value="Abrv">Abrv</option>
@@ -74,19 +75,19 @@ const VehicleMakeTable = observer(() => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th onClick={() => vehicleMakeStore.setSortBy('Name')}>Name</th>
-                        <th onClick={() => vehicleMakeStore.setSortBy('Abrv')}>Abbreviation</th>
+                        <th onClick={() => vehicleMakeListStore.setSortBy('Name')}>Name</th>
+                        <th onClick={() => vehicleMakeListStore.setSortBy('Abrv')}>Abbreviation</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {vehicleMakeStore.vehicles.map((vehicle, index) => (
+                    {vehicleMakeListStore.vehicles.map((vehicle, index) => (
                         <tr key={vehicle.id}>
-                            <td>{(vehicleMakeStore.currentPage - 1) * vehicleMakeStore.vehiclesPerPage + index + 1}</td>
+                            <td>{(vehicleMakeListStore.currentPage - 1) * vehicleMakeListStore.vehiclesPerPage + index + 1}</td>
                             <td>{vehicle.name}</td>
                             <td>{vehicle.abrv}</td>
                             <td>
-                                <button className="edit-btn" onClick={() => vehicleMakeStore.setEditingVehicle(vehicle)}>
+                                <button className="edit-btn" onClick={() => vehicleMakeEditPostDelStore.setEditingVehicle(vehicle)}>
                                     Edit
                                 </button>
                                 <button className="delete-btn" onClick={() => handleDelete(vehicle.id)}>
@@ -99,12 +100,12 @@ const VehicleMakeTable = observer(() => {
             </table>
 
             <div className="pagination">
-                {vehicleMakeStore.totalPages > 0 ? (
-                    Array.from({ length: vehicleMakeStore.totalPages }, (_, i) => (
+                {vehicleMakeListStore.totalPages > 0 ? (
+                    Array.from({ length: vehicleMakeListStore.totalPages }, (_, i) => (
                         <button
                             key={i + 1}
-                            onClick={() => vehicleMakeStore.setCurrentPage(i + 1)}
-                            className={vehicleMakeStore.currentPage === i + 1 ? 'active' : ''}
+                            onClick={() => vehicleMakeListStore.setCurrentPage(i + 1)}
+                            className={vehicleMakeListStore.currentPage === i + 1 ? 'active' : ''}
                         >
                             {i + 1}
                         </button>
@@ -115,7 +116,7 @@ const VehicleMakeTable = observer(() => {
 
             </div>
 
-            {vehicleMakeStore.editingVehicle && (
+            {vehicleMakeEditPostDelStore.editingVehicle && (
                 <div ref={formRef}>
                     <VehicleMakeEdit />
                 </div>

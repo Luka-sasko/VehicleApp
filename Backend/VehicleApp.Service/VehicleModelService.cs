@@ -23,25 +23,30 @@ namespace VehicleApp.Service
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public async Task AddVehicleModelAsync(VehicleModel vehicleModel)
+        public async Task<bool> AddVehicleModelAsync(VehicleModel vehicleModel)
         {
             if (vehicleModel == null)
             {
                 throw new ArgumentNullException(nameof(vehicleModel), "Vehicle model cannot be null");
             }
-            await _unitOfWork.GetRepository<VehicleModel>().AddAsync(vehicleModel);
+            var isAdded = await _unitOfWork.GetRepository<VehicleModel>().AddAsync(vehicleModel);
             await _unitOfWork.CommitAsync();
+
+            return isAdded;
         }
 
-        public async Task DeleteVehicleModelAsync(Guid id)
+        public async Task<bool> DeleteVehicleModelAsync(Guid id)
         {
             var repository = _unitOfWork.GetRepository<VehicleModel>();
             var entity = await repository.GetByIdAsync(id);
+            var isDeleted = false;
             if (entity != null)
             {
-                await repository.Delete(entity);
+                isDeleted = await repository.Delete(entity);
                 await _unitOfWork.CommitAsync();
             }
+
+            return isDeleted;
         }
 
         public async Task<PagedList<VehicleModelView>> GetAllAsync(Expression<Func<VehicleModel, bool>> predicate, Paging paging, Sorting sorting)
@@ -58,14 +63,15 @@ namespace VehicleApp.Service
             return vehicleModelView;
         }
 
-        public async Task UpdateVehicleModelAsync(VehicleModel vehicleModel)
+        public async Task<bool> UpdateVehicleModelAsync(VehicleModel vehicleModel)
         {
             if (vehicleModel == null)
             {
                 throw new ArgumentNullException(nameof(vehicleModel), "Vehicle model cannot be null");
             }
-            await _unitOfWork.GetRepository<VehicleModel>().Update(vehicleModel);
+            var isUpdated = await _unitOfWork.GetRepository<VehicleModel>().Update(vehicleModel);
             await _unitOfWork.CommitAsync();
+            return isUpdated;
         }
     }
 }

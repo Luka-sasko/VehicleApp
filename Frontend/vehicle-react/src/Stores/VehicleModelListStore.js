@@ -1,13 +1,10 @@
-import { makeAutoObservable, action } from 'mobx';
-import { get, post, put, remove } from '../Api/base_api';
+import { makeObservable, observable, action, computed } from 'mobx';import { get } from '../Api/base_api';
 
-class VehicleModelStore {
+class VehicleModelListStore {
     vehicles = [];
     totalCount = 0;
     currentPage = 1;
     vehiclesPerPage = 10;
-    editingVehicle = null;
-    newVehicle = { name: '', abrv: '' };
     sortBy = 'Name';
     sortOrder = 'asc';
     searchName = '';
@@ -15,21 +12,29 @@ class VehicleModelStore {
     searchMakeId = '';
 
     constructor() {
-        makeAutoObservable(this, {
+        makeObservable(this, {
+            vehicles: observable,
+            totalCount: observable,
+            currentPage: observable,
+            vehiclesPerPage: observable,
+            sortBy: observable,
+            sortOrder: observable,
+            searchName: observable,
+            searchAbrv: observable,
+            searchMakeId: observable,
+
             fetchVehicles: action,
-            addVehicle: action,
-            updateVehicle: action,
-            deleteVehicle: action,
             setCurrentPage: action,
             setVehiclesPerPage: action,
-            setEditingVehicle: action,
             setSortBy: action,
             setSortOrder: action,
             setSearchName: action,
             setSearchAbrv: action,
             setSearchMakeId: action,
             setVehicles: action,
-            setTotalCount: action
+            setTotalCount: action,
+
+            totalPages: computed
         });
     }
 
@@ -54,39 +59,6 @@ class VehicleModelStore {
         }
     }
 
-    async addVehicle(vehicle) {
-        try {
-            await post('/vehiclemodel/', vehicle);
-            this.newVehicle = { name: '', abrv: '', makeId: '' }
-            await this.fetchVehicles();
-        } catch (error) {
-            console.error('Error adding vehicle:', error);
-        }
-    }
-
-
-    async updateVehicle(vehicle) {
-        try {
-            await put(`/vehiclemodel/${vehicle.id}`, vehicle);
-            this.editingVehicle = null;
-            await this.fetchVehicles();
-        } catch (error) {
-            console.error('Error updating vehicle:', error);
-
-        }
-    }
-
-
-    async deleteVehicle(id) {
-        try {
-            await remove(`/vehiclemodel/${id}`);
-            await this.fetchVehicles();
-        } catch (error) {
-            console.error('Error deleting vehicle:', error);
-        }
-    }
-
-
     setCurrentPage(page) {
         this.currentPage = page;
         this.fetchVehicles();
@@ -96,10 +68,6 @@ class VehicleModelStore {
         this.vehiclesPerPage = count;
         this.currentPage = 1;
         this.fetchVehicles();
-    }
-
-    setEditingVehicle(vehicle) {
-        this.editingVehicle = vehicle
     }
 
     setSortBy(sort) {
@@ -144,5 +112,4 @@ class VehicleModelStore {
 
 }
 
-
-export const vehicleModelStore = new VehicleModelStore();
+export const vehicleModelListStore = new VehicleModelListStore();
